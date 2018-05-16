@@ -1,0 +1,512 @@
+# check there is a first column called X.
+# if first column is "X" (comes from saving csv and not including rownames=F)
+if(colnames(l)[1]=="X"){
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+}
+else
+{
+df1<-l[,1:13]
+df2<-r[,1:13]
+df3<-df1%>%gather(subject,behavior,1:12)
+df4<-df2%>%gather(subject,behavior,1:12)
+}
+df3<-cbind(side="left",df3)
+df4<-cbind(side="right",df4)
+df5<-rbind(df3,df4)%>%arrange(realtime)%>%mutate(endtime=realtime+1)
+df5<-as.data.frame(df5)
+df<-sapply(df5,as.character)
+df[is.na(df)] <- " "
+df<-as.data.frame(df) #cbind sucks
+df$eating <- ifelse(grepl("e", df$behavior), 1, 0)
+df$drinking <- ifelse(grepl("d", df$behavior), 1, 0)
+df<-as.data.frame(df)
+df$realtime <- as.numeric(as.character(df$realtime))
+df$endtime <- as.numeric(as.character(df$endtime))
+df <- df[order(df$realtime),]
+return(df)
+}
+getdf(l36.9,r36.9)
+dfx<-df %>%
+mutate(present=ifelse(eating+drinking>0,1,0)) %>%
+filter(present!=0) %>%
+select(realtime,subject,present,side)
+getdf_side <- function(l,r){
+# check there is a first column called X.
+# if first column is "X" (comes from saving csv and not including rownames=F)
+if(colnames(l)[1]=="X"){
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+}
+else
+{
+df1<-l[,1:13]
+df2<-r[,1:13]
+df3<-df1%>%gather(subject,behavior,1:12)
+df4<-df2%>%gather(subject,behavior,1:12)
+}
+df3<-cbind(side="left",df3)
+df4<-cbind(side="right",df4)
+df5<-rbind(df3,df4)%>%arrange(realtime)%>%mutate(endtime=realtime+1)
+df5<-as.data.frame(df5)
+df<-sapply(df5,as.character)
+df[is.na(df)] <- " "
+df<-as.data.frame(df) #cbind sucks
+df$eating <- ifelse(grepl("e", df$behavior), 1, 0)
+df$drinking <- ifelse(grepl("d", df$behavior), 1, 0)
+df<-as.data.frame(df)
+df$realtime <- as.numeric(as.character(df$realtime))
+df$endtime <- as.numeric(as.character(df$endtime))
+dfx<-df %>%
+mutate(present=ifelse(eating+drinking>0,1,0)) %>%
+filter(present!=0) %>%
+select(realtime,subject,present,side)
+dfx <- dfx[order(df$realtime),]
+return(df)
+}
+getdf_side(l36.9,r36.9)
+dfx<-df %>%
+mutate(present=ifelse(eating+drinking>0,1,0)) %>%
+filter(present!=0) %>%
+select(realtime,subject,present,side)
+getdf_side <- function(l,r){
+# check there is a first column called X.
+# if first column is "X" (comes from saving csv and not including rownames=F)
+if(colnames(l)[1]=="X"){
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+}
+else
+{
+df1<-l[,1:13]
+df2<-r[,1:13]
+df3<-df1%>%gather(subject,behavior,1:12)
+df4<-df2%>%gather(subject,behavior,1:12)
+}
+df3<-cbind(side="left",df3)
+df4<-cbind(side="right",df4)
+df5<-rbind(df3,df4)%>%arrange(realtime)%>%mutate(endtime=realtime+1)
+df5<-as.data.frame(df5)
+df<-sapply(df5,as.character)
+df[is.na(df)] <- " "
+df<-as.data.frame(df) #cbind sucks
+df$eating <- ifelse(grepl("e", df$behavior), 1, 0)
+df$drinking <- ifelse(grepl("d", df$behavior), 1, 0)
+df<-as.data.frame(df)
+df$realtime <- as.numeric(as.character(df$realtime))
+df$endtime <- as.numeric(as.character(df$endtime))
+dfx<-df %>%
+mutate(present=ifelse(eating+drinking>0,1,0)) %>%
+filter(present!=0) %>%
+select(realtime,subject,present,side)
+dfx <- dfx[order(df$realtime),]
+return(dfx)
+}
+getdf_side(l36.9,r36.9)
+getdf_side <- function(l,r){
+# check there is a first column called X.
+# if first column is "X" (comes from saving csv and not including rownames=F)
+if(colnames(l)[1]=="X"){
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+}
+else
+{
+df1<-l[,1:13]
+df2<-r[,1:13]
+df3<-df1%>%gather(subject,behavior,1:12)
+df4<-df2%>%gather(subject,behavior,1:12)
+}
+df3<-cbind(side="left",df3)
+df4<-cbind(side="right",df4)
+df5<-rbind(df3,df4)%>%arrange(realtime)%>%mutate(endtime=realtime+1)
+df5<-as.data.frame(df5)
+df<-sapply(df5,as.character)
+df[is.na(df)] <- " "
+df<-as.data.frame(df) #cbind sucks
+df$eating <- ifelse(grepl("e", df$behavior), 1, 0)
+df$drinking <- ifelse(grepl("d", df$behavior), 1, 0)
+df<-as.data.frame(df)
+df$realtime <- as.numeric(as.character(df$realtime))
+df$endtime <- as.numeric(as.character(df$endtime))
+dfx<-df %>%
+mutate(present=ifelse(eating+drinking>0,1,0)) %>%
+filter(present!=0) %>%
+select(realtime,subject,side)
+dfx <- dfx[order(df$realtime),]
+return(dfx)
+}
+l36.9 <- read.csv("c36_left_082515.csv", stringsAsFactors=FALSE)
+r36.9 <- read.csv("c36_right_082515.csv", stringsAsFactors=FALSE)
+l37.6 <- read.csv("c37_left_082215.csv", stringsAsFactors=FALSE)
+r37.6 <- read.csv("c37_right_082215.csv", stringsAsFactors=FALSE)
+l38.17 <- read.csv("c38_left_090215.csv", stringsAsFactors=FALSE)
+r38.17 <- read.csv("c38_right_090215.csv", stringsAsFactors=FALSE)
+l39.22 <- read.csv("c39_left_090715.csv", stringsAsFactors=FALSE)
+r39.22 <- read.csv("c39_right_090715.csv", stringsAsFactors=FALSE)
+# l44.3 <- read.csv("c44_left_100815.csv", stringsAsFactors=FALSE)
+# r44.3 <- read.csv("c44_right_100815.csv", stringsAsFactors=FALSE)
+l44.8 <- read.csv("c44_left_101315.csv", stringsAsFactors=FALSE)
+r44.8 <- read.csv("c44_right_101315.csv", stringsAsFactors=FALSE)
+l45.14 <- read.csv("c45_left_101915.csv", stringsAsFactors=FALSE)
+r45.14 <- read.csv("c45_right_101915.csv", stringsAsFactors=FALSE)
+l46.20 <- read.csv("c46_left_102515.csv", stringsAsFactors=FALSE)
+r46.20 <- read.csv("c46_right_102515.csv", stringsAsFactors=FALSE)
+l69.1 <- read.csv("c69_left_042416.csv", stringsAsFactors=FALSE)
+r69.1 <- read.csv("c69_right_042416.csv", stringsAsFactors=FALSE)
+l80.1 <- read.csv("c80_left_071316.csv", stringsAsFactors=FALSE)
+r80.1 <- read.csv("c80_right_071316.csv", stringsAsFactors=FALSE)
+l81.7 <- read.csv("c81_left_071916.csv", stringsAsFactors=FALSE) #
+r81.7 <- read.csv("c81_right_071916.csv", stringsAsFactors=FALSE)
+l83.12 <- read.csv("c83_left_110416.csv", stringsAsFactors=FALSE) #
+r83.12 <- read.csv("c83_right_110416.csv", stringsAsFactors=FALSE)
+l83.1 <- read.csv("c83_left_102416.csv", stringsAsFactors=FALSE) #
+r83.1 <- read.csv("c83_right_102416.csv", stringsAsFactors=FALSE)
+l85.8 <- read.csv("c85_left_120616.csv", stringsAsFactors=FALSE) #
+r85.8 <- read.csv("c85_right_120616.csv", stringsAsFactors=FALSE)
+l86.7 <- read.csv("c86_left_120516.csv", stringsAsFactors=FALSE) #
+r86.7 <- read.csv("c86_right_120516.csv", stringsAsFactors=FALSE)
+l86.1 <- read.csv("c86_left_112916.csv", stringsAsFactors=FALSE) #
+r86.1 <- read.csv("c86_right_112916.csv", stringsAsFactors=FALSE)
+df37.1 <- read.csv("cohort37_day1_01.csv") %>% rename(subject=mouse) %>% select(7,1:6)
+df36.9 <- getdf_side(l36.9,r36.9) %>% mutate(cohort=36, day=9)
+df37.6 <- getdf_side(l37.6,r37.6) %>% mutate(cohort=37, day=6)
+df38.17 <- getdf_side(l38.17,r38.17) %>% mutate(cohort=38, day=17)
+df39.22 <- getdf_side(l39.22,r39.22) %>% mutate(cohort=39, day=22)
+df44.8 <- getdf_side(l44.8,r44.8)  %>% mutate(cohort=44, day=8)
+df45.14 <- getdf_side(l45.14,r45.14)  %>% mutate(cohort=45, day=14)
+df46.20 <- getdf_side(l46.20,r46.20)  %>% mutate(cohort=46, day=20)
+df69.1 <- getdf_side(l69.1,r69.1)  %>% mutate(cohort=69, day=1)
+df80.1 <- getdf_side(l80.1,r80.1) %>% mutate(cohort=80, day=1)
+df81.7 <- getdf_side(l81.7,r81.7)  %>% mutate(cohort=81, day=7)
+df83.1 <- getdf_side(l83.1,r83.1)  %>% mutate(cohort=83, day=1)
+df83.12 <- getdf_side(l83.12,r83.12)  %>% mutate(cohort=83, day=12)
+df86.7 <- getdf_side(l86.7,r86.7)  %>% mutate(cohort=86, day=7) #
+df86.1 <- getdf_side(l86.1,r86.1)  %>% mutate(cohort=86, day=1)
+df85.8 <- getdf_side(l85.8,r85.8)  %>% mutate(cohort=85, day=8)
+df36.9
+getwd
+getwd()
+setwd( "C:/Users/Won/Dropbox/Won/Data_Food intake pattern/cleandata/with_side")
+write.csv(df36.9,"c36.9.csv")
+write.csv(df37.6,"c37.6.csv")
+write.csv(df38.17,"c38.17.csv")
+write.csv(df39.22,"c39.22.csv")
+write.csv(df44.8,"c44.8.csv")
+write.csv(df45.14,"c45.14.csv")
+write.csv(df46.20,"c46.20.csv")
+write.csv(df69.1,"c69.1.csv")
+write.csv(df80.1,"c80.1.csv")
+write.csv(df81.7,"c81.7.csv")
+write.csv(df83.12,"c83.12.csv")
+write.csv(df83.1,"c83.1.csv")
+write.csv(df86.7,"c86.7.csv")
+write.csv(df86.1,"c86.1.csv")
+write.csv(df85.8,"c85.8.csv")
+l <- read.csv("c36_left_082515.csv", stringsAsFactors=FALSE)
+r <- read.csv("c36_right_082515.csv", stringsAsFactors=FALSE)
+if(colnames(l)[1]=="X"){
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+}
+else
+{
+df1<-l[,1:13]
+df2<-r[,1:13]
+df3<-df1%>%gather(subject,behavior,1:12)
+df4<-df2%>%gather(subject,behavior,1:12)
+}
+setwd("C:/Users/Won/Dropbox/Won/Data_Food intake pattern/cleandata")
+l<- read.csv("c36_left_082515.csv", stringsAsFactors=FALSE)
+r <- read.csv("c36_right_082515.csv", stringsAsFactors=FALSE)
+if(colnames(l)[1]=="X"){
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+}
+else
+{
+df1<-l[,1:13]
+df2<-r[,1:13]
+df3<-df1%>%gather(subject,behavior,1:12)
+df4<-df2%>%gather(subject,behavior,1:12)
+}
+df3<-cbind(side="left",df3)
+df4<-cbind(side="right",df4)
+df5<-rbind(df3,df4)%>%arrange(realtime)
+df5
+df5<-rbind(df3,df4)%>%arrange(realtime)
+df3
+if(colnames(l)[1]=="X"){
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+}
+else
+{
+df1<-l[,1:13]
+df2<-r[,1:13]
+df3<-df1%>%gather(subject,behavior,1:12)
+df4<-df2%>%gather(subject,behavior,1:12)
+}
+df1<-l[,2:14]
+df1
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+df3<-cbind(side="left",df3)
+df4<-cbind(side="right",df4)
+df5<-rbind(df3,df4)%>%arrange(realtime)
+df5<-as.data.frame(df5)
+df5
+df<-sapply(df5,as.character)
+df5
+df[is.na(df)] <- " "
+df<-as.data.frame(df) #cbind sucks
+df
+df$eating <- ifelse(grepl("e", df$behavior), 1, 0)
+df$drinking <- ifelse(grepl("d", df$behavior), 1, 0)
+df<-as.data.frame(df)
+df$realtime <- as.numeric(as.character(df$realtime))
+df$endtime <- as.numeric(as.character(df$endtime))
+df$realtime <- as.numeric(as.character(df$realtime))
+dfx<-df %>%
+mutate(present=ifelse(eating+drinking>0,1,0)) %>%
+filter(present==0) %>%
+select(realtime,subject,side)
+tail(dfx)
+dfx<-df %>%
+mutate(present=ifelse(eating+drinking>0,1,0)) %>%
+filter(present==1) %>%
+select(realtime,subject,side)
+tail(dfx)
+getdf_side <- function(l,r){
+# check there is a first column called X.
+# if first column is "X" (comes from saving csv and not including rownames=F)
+if(colnames(l)[1]=="X"){
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+}
+else
+{
+df1<-l[,1:13]
+df2<-r[,1:13]
+df3<-df1%>%gather(subject,behavior,1:12)
+df4<-df2%>%gather(subject,behavior,1:12)
+}
+df3<-cbind(side="left",df3)
+df4<-cbind(side="right",df4)
+df5<-rbind(df3,df4)%>%arrange(realtime)
+df5<-as.data.frame(df5)
+df<-sapply(df5,as.character)
+df[is.na(df)] <- " "
+df<-as.data.frame(df) #cbind sucks
+df$eating <- ifelse(grepl("e", df$behavior), 1, 0)
+df$drinking <- ifelse(grepl("d", df$behavior), 1, 0)
+df<-as.data.frame(df)
+df$realtime <- as.numeric(as.character(df$realtime))
+dfx<-df %>%
+mutate(present=ifelse(eating+drinking>0,1,0)) %>%
+filter(present==1) %>%
+select(realtime,subject,side)
+tail(dfx)
+dfx <- dfx[order(df$realtime),]
+return(dfx)
+}
+### Import Data: - nb. cohort 37 day 1 is different format.----
+#l37.1 <- read.csv("c37_left_081715.csv", stringsAsFactors=FALSE) #Use other format
+#r37.1 <- read.csv("c37_right_081715.csv", stringsAsFactors=FALSE)
+l36.9 <- read.csv("c36_left_082515.csv", stringsAsFactors=FALSE)
+r36.9 <- read.csv("c36_right_082515.csv", stringsAsFactors=FALSE)
+l37.6 <- read.csv("c37_left_082215.csv", stringsAsFactors=FALSE)
+r37.6 <- read.csv("c37_right_082215.csv", stringsAsFactors=FALSE)
+l38.17 <- read.csv("c38_left_090215.csv", stringsAsFactors=FALSE)
+r38.17 <- read.csv("c38_right_090215.csv", stringsAsFactors=FALSE)
+l39.22 <- read.csv("c39_left_090715.csv", stringsAsFactors=FALSE)
+r39.22 <- read.csv("c39_right_090715.csv", stringsAsFactors=FALSE)
+# l44.3 <- read.csv("c44_left_100815.csv", stringsAsFactors=FALSE)
+# r44.3 <- read.csv("c44_right_100815.csv", stringsAsFactors=FALSE)
+l44.8 <- read.csv("c44_left_101315.csv", stringsAsFactors=FALSE)
+r44.8 <- read.csv("c44_right_101315.csv", stringsAsFactors=FALSE)
+l45.14 <- read.csv("c45_left_101915.csv", stringsAsFactors=FALSE)
+r45.14 <- read.csv("c45_right_101915.csv", stringsAsFactors=FALSE)
+l46.20 <- read.csv("c46_left_102515.csv", stringsAsFactors=FALSE)
+r46.20 <- read.csv("c46_right_102515.csv", stringsAsFactors=FALSE)
+l69.1 <- read.csv("c69_left_042416.csv", stringsAsFactors=FALSE)
+r69.1 <- read.csv("c69_right_042416.csv", stringsAsFactors=FALSE)
+l80.1 <- read.csv("c80_left_071316.csv", stringsAsFactors=FALSE)
+r80.1 <- read.csv("c80_right_071316.csv", stringsAsFactors=FALSE)
+l81.7 <- read.csv("c81_left_071916.csv", stringsAsFactors=FALSE) #
+r81.7 <- read.csv("c81_right_071916.csv", stringsAsFactors=FALSE)
+l83.12 <- read.csv("c83_left_110416.csv", stringsAsFactors=FALSE) #
+r83.12 <- read.csv("c83_right_110416.csv", stringsAsFactors=FALSE)
+l83.1 <- read.csv("c83_left_102416.csv", stringsAsFactors=FALSE) #
+r83.1 <- read.csv("c83_right_102416.csv", stringsAsFactors=FALSE)
+l85.8 <- read.csv("c85_left_120616.csv", stringsAsFactors=FALSE) #
+r85.8 <- read.csv("c85_right_120616.csv", stringsAsFactors=FALSE)
+l86.7 <- read.csv("c86_left_120516.csv", stringsAsFactors=FALSE) #
+r86.7 <- read.csv("c86_right_120516.csv", stringsAsFactors=FALSE)
+l86.1 <- read.csv("c86_left_112916.csv", stringsAsFactors=FALSE) #
+r86.1 <- read.csv("c86_right_112916.csv", stringsAsFactors=FALSE)
+df36.9 <- getdf_side(l36.9,r36.9) %>% mutate(cohort=36, day=9)
+df37.6 <- getdf_side(l37.6,r37.6) %>% mutate(cohort=37, day=6)
+df38.17 <- getdf_side(l38.17,r38.17) %>% mutate(cohort=38, day=17)
+df39.22 <- getdf_side(l39.22,r39.22) %>% mutate(cohort=39, day=22)
+df44.8 <- getdf_side(l44.8,r44.8)  %>% mutate(cohort=44, day=8)
+df45.14 <- getdf_side(l45.14,r45.14)  %>% mutate(cohort=45, day=14)
+df46.20 <- getdf_side(l46.20,r46.20)  %>% mutate(cohort=46, day=20)
+df69.1 <- getdf_side(l69.1,r69.1)  %>% mutate(cohort=69, day=1)
+df80.1 <- getdf_side(l80.1,r80.1) %>% mutate(cohort=80, day=1)
+df81.7 <- getdf_side(l81.7,r81.7)  %>% mutate(cohort=81, day=7)
+df83.12 <- getdf_side(l83.12,r83.12)  %>% mutate(cohort=83, day=12)
+df83.1 <- getdf_side(l83.1,r83.1)  %>% mutate(cohort=83, day=1)
+df86.7 <- getdf_side(l86.7,r86.7)  %>% mutate(cohort=86, day=7) #
+df86.1 <- getdf_side(l86.1,r86.1)  %>% mutate(cohort=86, day=1)
+df85.8 <- getdf_side(l85.8,r85.8)  %>% mutate(cohort=85, day=8)
+tail(df86.7)
+getdf_side <- function(l,r){
+# check there is a first column called X.
+# if first column is "X" (comes from saving csv and not including rownames=F)
+if(colnames(l)[1]=="X"){
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+}
+else
+{
+df1<-l[,1:13]
+df2<-r[,1:13]
+df3<-df1%>%gather(subject,behavior,1:12)
+df4<-df2%>%gather(subject,behavior,1:12)
+}
+df3<-cbind(side="left",df3)
+df4<-cbind(side="right",df4)
+df5<-rbind(df3,df4)%>%arrange(realtime)
+df5<-as.data.frame(df5)
+df<-sapply(df5,as.character)
+df[is.na(df)] <- " "
+df<-as.data.frame(df) #cbind sucks
+df$eating <- ifelse(grepl("e", df$behavior), 1, 0)
+df$drinking <- ifelse(grepl("d", df$behavior), 1, 0)
+df<-as.data.frame(df)
+df$realtime <- as.numeric(as.character(df$realtime))
+dfx<-df %>%
+mutate(present=ifelse(eating+drinking>0,1,0)) %>%
+filter(present==1) %>%
+select(realtime,subject,side)
+tail(dfx)
+dfx <- dfx[order(df$realtime),]
+return(dfx)
+}
+df86.7 <- getdf_side(l86.7,r86.7)  %>% mutate(cohort=86, day=7) #
+tail(df86.7)
+View(dfx)
+getdf_side(l36.9,r36.9)
+df36.9 <- getdf_side(l36.9,r36.9)
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+df3<-cbind(side="left",df3)
+df4<-cbind(side="right",df4)
+df5<-rbind(df3,df4)%>%arrange(realtime)
+df5<-as.data.frame(df5)
+df<-sapply(df5,as.character)
+df[is.na(df)] <- " "
+df<-as.data.frame(df) #cbind sucks
+df$eating <- ifelse(grepl("e", df$behavior), 1, 0)
+df$drinking <- ifelse(grepl("d", df$behavior), 1, 0)
+df<-as.data.frame(df)
+df$realtime <- as.numeric(as.character(df$realtime))
+dfx<-df %>%
+mutate(present=ifelse(eating+drinking>0,1,0)) %>%
+filter(present==1) %>%
+select(realtime,subject,side)
+dfx <- dfx[order(df$realtime),]
+return(dfxx)
+dfxx <- dfx[order(dfx$realtime),]
+getdf_side <- function(l,r){
+# check there is a first column called X.
+# if first column is "X" (comes from saving csv and not including rownames=F)
+if(colnames(l)[1]=="X"){
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+}
+else
+{
+df1<-l[,1:13]
+df2<-r[,1:13]
+df3<-df1%>%gather(subject,behavior,1:12)
+df4<-df2%>%gather(subject,behavior,1:12)
+}
+df3<-cbind(side="left",df3)
+df4<-cbind(side="right",df4)
+df5<-rbind(df3,df4)%>%arrange(realtime)
+df5<-as.data.frame(df5)
+df<-sapply(df5,as.character)
+df[is.na(df)] <- " "
+df<-as.data.frame(df) #cbind sucks
+df$eating <- ifelse(grepl("e", df$behavior), 1, 0)
+df$drinking <- ifelse(grepl("d", df$behavior), 1, 0)
+df<-as.data.frame(df)
+df$realtime <- as.numeric(as.character(df$realtime))
+dfx<-df %>%
+mutate(present=ifelse(eating+drinking>0,1,0)) %>%
+filter(present==1) %>%
+select(realtime,subject,side)
+dfxx <- dfx[order(dfx$realtime),]
+return(dfxx)
+}
+df36.9 <- getdf_side(l36.9,r36.9) %>% mutate(cohort=36, day=9)
+df37.6 <- getdf_side(l37.6,r37.6) %>% mutate(cohort=37, day=6)
+df38.17 <- getdf_side(l38.17,r38.17) %>% mutate(cohort=38, day=17)
+df39.22 <- getdf_side(l39.22,r39.22) %>% mutate(cohort=39, day=22)
+df44.8 <- getdf_side(l44.8,r44.8)  %>% mutate(cohort=44, day=8)
+df45.14 <- getdf_side(l45.14,r45.14)  %>% mutate(cohort=45, day=14)
+df46.20 <- getdf_side(l46.20,r46.20)  %>% mutate(cohort=46, day=20)
+df69.1 <- getdf_side(l69.1,r69.1)  %>% mutate(cohort=69, day=1)
+df80.1 <- getdf_side(l80.1,r80.1) %>% mutate(cohort=80, day=1)
+df81.7 <- getdf_side(l81.7,r81.7)  %>% mutate(cohort=81, day=7)
+df83.12 <- getdf_side(l83.12,r83.12)  %>% mutate(cohort=83, day=12)
+df83.1 <- getdf_side(l83.1,r83.1)  %>% mutate(cohort=83, day=1)
+df86.7 <- getdf_side(l86.7,r86.7)  %>% mutate(cohort=86, day=7) #
+df86.1 <- getdf_side(l86.1,r86.1)  %>% mutate(cohort=86, day=1)
+df85.8 <- getdf_side(l85.8,r85.8)  %>% mutate(cohort=85, day=8)
+tail(df86.7)
+write.csv(df36.9,"c36.9.csv",rownames=F)
+write.csv(df36.9,"c36.9.csv",row.names = F)
+setwd( "C:/Users/Won/Dropbox/Won/Data_Food intake pattern/cleandata/with_side")
+write.csv(df36.9,"c36.9.csv",row.names = F)
+write.csv(df37.6,"c37.6.csv",row.names = F)
+write.csv(df38.17,"c38.17.csv",row.names = F)
+write.csv(df39.22,"c39.22.csv",row.names = F)
+write.csv(df44.8,"c44.8.csv",row.names = F)
+write.csv(df45.14,"c45.14.csv",row.names = F)
+write.csv(df46.20,"c46.20.csv",row.names = F)
+write.csv(df69.1,"c69.1.csv",row.names = F)
+write.csv(df80.1,"c80.1.csv",row.names = F)
+write.csv(df81.7,"c81.7.csv",row.names = F)
+write.csv(df83.12,"c83.12.csv",row.names = F)
+write.csv(df83.1,"c83.1.csv",row.names = F)
+write.csv(df86.7,"c86.7.csv",row.names = F)
+write.csv(df86.1,"c86.1.csv",row.names = F)
+write.csv(df85.8,"c85.8.csv",row.names = F)
+write.csv(df36.9,"c36.9.csv",row.names = F)
