@@ -1,0 +1,512 @@
+l36.9 <- read.csv("c36_left_082515.csv", stringsAsFactors=FALSE)
+r36.9 <- read.csv("c36_right_082515.csv", stringsAsFactors=FALSE)
+#l37.1 <- read.csv("c37_left_081715.csv", stringsAsFactors=FALSE) #Use other format
+#r37.1 <- read.csv("c37_right_081715.csv", stringsAsFactors=FALSE)
+l37.6 <- read.csv("c37_left_082215.csv", stringsAsFactors=FALSE)
+r37.6 <- read.csv("c37_right_082215.csv", stringsAsFactors=FALSE)
+l38.17 <- read.csv("c38_left_090215.csv", stringsAsFactors=FALSE)
+r38.17 <- read.csv("c38_right_090215.csv", stringsAsFactors=FALSE)
+l39.22 <- read.csv("c39_left_090715.csv", stringsAsFactors=FALSE)
+r39.22 <- read.csv("c39_right_090715.csv", stringsAsFactors=FALSE)
+# l44.3 <- read.csv("c44_left_100815.csv", stringsAsFactors=FALSE)
+# r44.3 <- read.csv("c44_right_100815.csv", stringsAsFactors=FALSE)
+l44.8 <- read.csv("c44_left_101315.csv", stringsAsFactors=FALSE)
+r44.8 <- read.csv("c44_right_101315.csv", stringsAsFactors=FALSE)
+l45.14 <- read.csv("c45_left_101915.csv", stringsAsFactors=FALSE)
+r45.14 <- read.csv("c45_right_101915.csv", stringsAsFactors=FALSE)
+l46.20 <- read.csv("c46_left_102515.csv", stringsAsFactors=FALSE)
+r46.20 <- read.csv("c46_right_102515.csv", stringsAsFactors=FALSE)
+l69.1 <- read.csv("c69_left_042416.csv", stringsAsFactors=FALSE)
+r69.1 <- read.csv("c69_right_042416.csv", stringsAsFactors=FALSE)
+l80.1 <- read.csv("c80_left_071316.csv", stringsAsFactors=FALSE)
+r80.1 <- read.csv("c80_right_071316.csv", stringsAsFactors=FALSE)
+l81.7 <- read.csv("c81_left_071916.csv", stringsAsFactors=FALSE) #
+r81.7 <- read.csv("c81_right_071916.csv", stringsAsFactors=FALSE)
+l83.12 <- read.csv("c83_left_110416.csv", stringsAsFactors=FALSE) #
+r83.12 <- read.csv("c83_right_110416.csv", stringsAsFactors=FALSE)
+l83.1 <- read.csv("c83_left_102416.csv", stringsAsFactors=FALSE) #
+r83.1 <- read.csv("c83_right_102416.csv", stringsAsFactors=FALSE)
+l85.8 <- read.csv("c85_left_120616.csv", stringsAsFactors=FALSE) #
+r85.8 <- read.csv("c85_right_120616.csv", stringsAsFactors=FALSE)
+l86.7 <- read.csv("c86_left_120516.csv", stringsAsFactors=FALSE) #
+r86.7 <- read.csv("c86_right_120516.csv", stringsAsFactors=FALSE)
+l86.1 <- read.csv("c86_left_112916.csv", stringsAsFactors=FALSE) #
+r86.1 <- read.csv("c86_right_112916.csv", stringsAsFactors=FALSE)
+### CHECK WE HAVE ALL MINUTES ON BOTH SIDES:
+### Reminder - each side must have 17292 rows of data - do they?
+#12 * 1441  = 17292
+getdf(l36.9,r36.9)
+getdf(l37.6,r37.6)    #changes red light  on left side at 719 not 720 --> FIXED
+getdf(l38.17,r38.17)
+getdf(l39.22,r39.22) #changes red light  on left side at 721 not 720 --> FIXED
+getdf(l44.8,r44.8)
+getdf(l45.14,r45.14)
+getdf(l46.20,r46.20)
+getdf(l69.1,r69.1)
+getdf(l80.1,r80.1)
+getdf(l81.7,r81.7) #changes red light  on left side at 719 not 720 --> FIXED
+getdf(l83.12,r83.12)
+getdf(l83.1,r83.1)
+getdf(l86.7,r86.7)  #changes red light  on left side at 721 not 720 --> FIXED
+getdf(l86.1,r86.1) #changes red light on left side at 721 not 720 --> FIXED
+getdf(l85.8,r85.8)   #changes red light on left side at 721 not 720 --> FIXED
+df37.1 <- read.csv("cohort37_day1_01.csv") %>% rename(subject=mouse) %>% select(7,1:6)
+df36.9 <- getdf(l36.9,r36.9)[[1]] %>% mutate(cohort=36, day=9)
+df37.6 <- getdf(l37.6,r37.6)[[1]]  %>% mutate(cohort=37, day=6)
+df38.17 <- getdf(l38.17,r38.17)[[1]] %>% mutate(cohort=38, day=17)
+df39.22 <- getdf(l39.22,r39.22)[[1]] %>% mutate(cohort=39, day=22)
+df44.8 <- getdf(l44.8,r44.8)[[1]]  %>% mutate(cohort=44, day=8)
+df45.14 <- getdf(l45.14,r45.14)[[1]]  %>% mutate(cohort=45, day=14)
+df46.20 <- getdf(l46.20,r46.20)[[1]]  %>% mutate(cohort=46, day=20)
+df69.1 <- getdf(l69.1,r69.1)[[1]]   %>% mutate(cohort=69, day=1)
+df80.1 <- getdf(l80.1,r80.1)[[1]]  %>% mutate(cohort=80, day=1)
+df81.7 <- getdf(l81.7,r81.7)[[1]]  %>% mutate(cohort=81, day=7)
+df83.12 <- getdf(l83.12,r83.12)[[1]]  %>% mutate(cohort=83, day=12)
+df83.1 <- getdf(l83.1,r83.1)[[1]]  %>% mutate(cohort=83, day=1)
+df86.7 <- getdf(l86.7,r86.7)[[1]]  %>% mutate(cohort=86, day=7) #
+df86.1 <- getdf(l86.1,r86.1)[[1]]  %>% mutate(cohort=86, day=1)
+df85.8 <- getdf(l85.8,r85.8)[[1]]  %>% mutate(cohort=85, day=8)
+setwd("C:/Users/Won/Dropbox/Won/Data_Food intake pattern/rawdata")
+a1<-read.csv("chrt86_morning_left_120516.csv")
+a2<-read.csv("chrt86_night_left_120516.csv")
+a3<-read.csv("chrt86_morning_left_120616.csv")
+names(a1)[names(a1)=="Start..minute."]<-"Minute"
+names(a2)[names(a2)=="Start..minute."]<-"Minute"
+names(a3)[names(a3)=="Start..minute."]<-"Minute"
+names(a1)<-gsub("Mouse.","M",names(a1))
+names(a2)<-gsub("Mouse.","M",names(a2))
+names(a3)<-gsub("Mouse.","M",names(a3))
+a1<-a1%>%mutate(Time=(60*Hour+Minute))
+a2<-a2%>%mutate(Time=(60*Hour+Minute))
+a3<-a3%>%mutate(Time=(60*Hour+Minute))
+light1<-a1%>%filter(Light=="off")%>%select(Time)%>%unlist(.)
+light2<-a2%>%filter(Light=="on")%>%select(Time)%>%unlist(.)
+light3<-a3%>%filter(Light=="off")%>%select(Time)%>%unlist(.)
+l1<-a1%>%mutate(realtime=Time-light1)%>%filter(realtime>=0)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+l2<-a2%>%mutate(realtime=Time-light2+720)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+l3<-a3%>%mutate(realtime=Time-light3+1440)%>%filter(realtime<=1440)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+head(l1)
+tail(l1)
+head(l2)
+tail(l2)
+head(l3)
+tail(l3)
+c86_left<-rbind(l1,l2,l3)
+b1<-read.csv("chrt86_morning_right_120516.csv")
+b2<-read.csv("chrt86_night_right_120516.csv")
+b3<-read.csv("chrt86_morning_right_120616.csv")
+names(b1)[names(b1)=="Start..minute."]<-"Minute"
+names(b2)[names(b2)=="Start..minute."]<-"Minute"
+names(b3)[names(b3)=="Start..minute."]<-"Minute"
+names(b1)<-gsub("Mouse.","M",names(b1))
+names(b2)<-gsub("Mouse.","M",names(b2))
+names(b3)<-gsub("Mouse.","M",names(b3))
+b1<-b1%>%mutate(Time=(60*Hour+Minute))
+b2<-b2%>%mutate(Time=(60*Hour+Minute))
+b3<-b3%>%mutate(Time=(60*Hour+Minute))
+light1<-b1%>%filter(Light=="off")%>%select(Time)%>%unlist(.)
+light2<-b2%>%filter(Light=="on")%>%select(Time)%>%unlist(.)
+light3<-b3%>%filter(Light=="off")%>%select(Time)%>%unlist(.)
+r1<-b1%>%mutate(realtime=Time-light1)%>%filter(realtime>=0)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+r2<-b2%>%mutate(realtime=Time-light2+720)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+r3<-b3%>%mutate(realtime=Time-light3+1440)%>%filter(realtime<=1440)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+head(l1)
+tail(l1)
+head(l2)
+tail(l2)
+head(l3)
+#Right
+b1<-read.csv("chrt86_morning_right_120516.csv")
+b2<-read.csv("chrt86_night_right_120516.csv")
+b3<-read.csv("chrt86_morning_right_120616.csv")
+names(b1)[names(b1)=="Start..minute."]<-"Minute"
+names(b2)[names(b2)=="Start..minute."]<-"Minute"
+names(b3)[names(b3)=="Start..minute."]<-"Minute"
+names(b1)<-gsub("Mouse.","M",names(b1))
+names(b2)<-gsub("Mouse.","M",names(b2))
+names(b3)<-gsub("Mouse.","M",names(b3))
+#Convert time in minutes
+b1<-b1%>%mutate(Time=(60*Hour+Minute))
+b2<-b2%>%mutate(Time=(60*Hour+Minute))
+b3<-b3%>%mutate(Time=(60*Hour+Minute))
+#According to light off and on, correct the timestamp for the actual timing
+#12pm - 0 min, 12am - 720min, the next day 12pm - 1440min
+light1<-b1%>%filter(Light=="off")%>%select(Time)%>%unlist(.)
+light2<-b2%>%filter(Light=="on")%>%select(Time)%>%unlist(.)
+light3<-b3%>%filter(Light=="off")%>%select(Time)%>%unlist(.)
+r1<-b1%>%mutate(realtime=Time-light1)%>%filter(realtime>=0)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+r2<-b2%>%mutate(realtime=Time-light2+720)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+r3<-b3%>%mutate(realtime=Time-light3+1440)%>%filter(realtime<=1440)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+head(l1)
+tail(l1)
+head(l2)
+tail(l2)
+head(l3)
+tail(l3)
+c86_right<-rbind(r1,r2,r3)
+b1<-read.csv("chrt86_morning_right_120516.csv")
+b2<-read.csv("chrt86_night_right_120516.csv")
+b3<-read.csv("chrt86_morning_right_120616.csv")
+names(b1)[names(b1)=="Start..minute."]<-"Minute"
+names(b2)[names(b2)=="Start..minute."]<-"Minute"
+names(b3)[names(b3)=="Start..minute."]<-"Minute"
+names(b1)<-gsub("Mouse.","M",names(b1))
+names(b2)<-gsub("Mouse.","M",names(b2))
+names(b3)<-gsub("Mouse.","M",names(b3))
+b1<-b1%>%mutate(Time=(60*Hour+Minute))
+b2<-b2%>%mutate(Time=(60*Hour+Minute))
+b3<-b3%>%mutate(Time=(60*Hour+Minute))
+light2<-b2%>%filter(Light=="on")%>%select(Time)%>%unlist(.)
+light1<-b1%>%filter(Light=="off")%>%select(Time)%>%unlist(.)
+light3<-b3%>%filter(Light=="off")%>%select(Time)%>%unlist(.)
+r1<-b1%>%mutate(realtime=Time-light1)%>%filter(realtime>=0)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+r2<-b2%>%mutate(realtime=Time-light2+720)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+r3<-b3%>%mutate(realtime=Time-light3+1440)%>%filter(realtime<=1440)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+head(l1)
+tail(l1)
+head(l2)
+tail(l2)
+a1<-read.csv("chrt86_morning_left_120516.csv")
+a2<-read.csv("chrt86_night_left_120516.csv")
+a3<-read.csv("chrt86_morning_left_120616.csv")
+names(a1)[names(a1)=="Start..minute."]<-"Minute"
+names(a2)[names(a2)=="Start..minute."]<-"Minute"
+names(a3)[names(a3)=="Start..minute."]<-"Minute"
+names(a1)<-gsub("Mouse.","M",names(a1))
+names(a2)<-gsub("Mouse.","M",names(a2))
+names(a3)<-gsub("Mouse.","M",names(a3))
+#Convert time in minutes
+a1<-a1%>%mutate(Time=(60*Hour+Minute))
+a2<-a2%>%mutate(Time=(60*Hour+Minute))
+a3<-a3%>%mutate(Time=(60*Hour+Minute))
+#According to light off and on, correct the timestamp for the actual timing
+#12pm - 0 min, 12am - 720min, the next day 12pm - 1440min
+light1<-a1%>%filter(Light=="off")%>%select(Time)%>%unlist(.)
+light2<-a2%>%filter(Light=="on")%>%select(Time)%>%unlist(.)
+light3<-a3%>%filter(Light=="off")%>%select(Time)%>%unlist(.)
+l1<-a1%>%mutate(realtime=Time-light1)%>%filter(realtime>=0)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+l2<-a2%>%mutate(realtime=Time-light2+720)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+l3<-a3%>%mutate(realtime=Time-light3+1440)%>%filter(realtime<=1440)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+head(l1)
+tail(l1)
+head(l2)
+tail(l2)
+head(l3)
+tail(l3)
+c86_left<-rbind(l1,l2,l3)
+#Right
+b1<-read.csv("chrt86_morning_right_120516.csv")
+b2<-read.csv("chrt86_night_right_120516.csv")
+b3<-read.csv("chrt86_morning_right_120616.csv")
+names(b1)[names(b1)=="Start..minute."]<-"Minute"
+names(b2)[names(b2)=="Start..minute."]<-"Minute"
+names(b3)[names(b3)=="Start..minute."]<-"Minute"
+names(b1)<-gsub("Mouse.","M",names(b1))
+names(b2)<-gsub("Mouse.","M",names(b2))
+names(b3)<-gsub("Mouse.","M",names(b3))
+#Convert time in minutes
+b1<-b1%>%mutate(Time=(60*Hour+Minute))
+b2<-b2%>%mutate(Time=(60*Hour+Minute))
+b3<-b3%>%mutate(Time=(60*Hour+Minute))
+#According to light off and on, correct the timestamp for the actual timing
+#12pm - 0 min, 12am - 720min, the next day 12pm - 1440min
+light1<-b1%>%filter(Light=="off")%>%select(Time)%>%unlist(.)
+light2<-b2%>%filter(Light=="on")%>%select(Time)%>%unlist(.)
+light3<-b3%>%filter(Light=="off")%>%select(Time)%>%unlist(.)
+r1<-b1%>%mutate(realtime=Time-light1)%>%filter(realtime>=0)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+r2<-b2%>%mutate(realtime=Time-light2+720)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+r3<-b3%>%mutate(realtime=Time-light3+1440)%>%filter(realtime<=1440)%>%select(realtime,M1,M2,M3,M4,M5,M6,M7,M8,M9,M10,M11,M12,Light)
+head(l1)
+tail(l1)
+head(l2)
+tail(l2)
+head(l3)
+tail(l3)
+c86_right<-rbind(r1,r2,r3)
+write.csv(c86_left,"c86_left_120516.csv")
+write.csv(c86_right,"c86_right_120516.csv")
+setwd("C:/Users/Won/Dropbox/Won/Data_Food intake pattern/cleandata/")
+getdf <- function(l,r){
+# check there is a first column called X.
+# if first column is "X" (comes from saving csv and not including rownames=F)
+times<-list(
+left_on = l[which(l$Light=="on"),"realtime"],
+right_on = r[which(r$Light=="on"),"realtime"],
+left_off = l[which(l$Light=="off"),"realtime"],
+right_off = r[which(r$Light=="off"),"realtime"]
+)
+if(colnames(l)[1]=="X"){
+df1<-l[,2:14]
+df2<-r[,2:14]
+df3<-df1%>%gather(subject,behavior,2:13)
+df4<-df2%>%gather(subject,behavior,2:13)
+}
+else
+{
+df1<-l[,1:13]
+df2<-r[,1:13]
+df3<-df1%>%gather(subject,behavior,1:12)
+df4<-df2%>%gather(subject,behavior,1:12)
+}
+df3<-cbind(side="left",df3)
+df4<-cbind(side="right",df4)
+df5<-rbind(df3,df4)%>%arrange(realtime)%>%mutate(endtime=realtime+1)
+df5<-as.data.frame(df5)
+df<-sapply(df5,as.character)
+df[is.na(df)] <- " "
+df<-as.data.frame(df) #cbind sucks
+df$eating <- ifelse(grepl("e", df$behavior), 1, 0)
+df$drinking <- ifelse(grepl("d", df$behavior), 1, 0)
+df <- df %>% group_by(subject,realtime, endtime) %>% summarise(eating=sum(eating), drinking=sum(drinking))
+df<-as.data.frame(df) #
+df$realtime <- as.numeric(as.character(df$realtime))
+df$endtime <- as.numeric(as.character(df$endtime))
+df <- df[order(df$realtime),]
+return(list(df,times))
+}
+### Import Data: - nb. cohort 37 day 1 is different format.----
+l36.9 <- read.csv("c36_left_082515.csv", stringsAsFactors=FALSE)
+r36.9 <- read.csv("c36_right_082515.csv", stringsAsFactors=FALSE)
+#l37.1 <- read.csv("c37_left_081715.csv", stringsAsFactors=FALSE) #Use other format
+#r37.1 <- read.csv("c37_right_081715.csv", stringsAsFactors=FALSE)
+l37.6 <- read.csv("c37_left_082215.csv", stringsAsFactors=FALSE)
+r37.6 <- read.csv("c37_right_082215.csv", stringsAsFactors=FALSE)
+l38.17 <- read.csv("c38_left_090215.csv", stringsAsFactors=FALSE)
+r38.17 <- read.csv("c38_right_090215.csv", stringsAsFactors=FALSE)
+l39.22 <- read.csv("c39_left_090715.csv", stringsAsFactors=FALSE)
+r39.22 <- read.csv("c39_right_090715.csv", stringsAsFactors=FALSE)
+# l44.3 <- read.csv("c44_left_100815.csv", stringsAsFactors=FALSE)
+# r44.3 <- read.csv("c44_right_100815.csv", stringsAsFactors=FALSE)
+l44.8 <- read.csv("c44_left_101315.csv", stringsAsFactors=FALSE)
+r44.8 <- read.csv("c44_right_101315.csv", stringsAsFactors=FALSE)
+l45.14 <- read.csv("c45_left_101915.csv", stringsAsFactors=FALSE)
+r45.14 <- read.csv("c45_right_101915.csv", stringsAsFactors=FALSE)
+l46.20 <- read.csv("c46_left_102515.csv", stringsAsFactors=FALSE)
+r46.20 <- read.csv("c46_right_102515.csv", stringsAsFactors=FALSE)
+l69.1 <- read.csv("c69_left_042416.csv", stringsAsFactors=FALSE)
+r69.1 <- read.csv("c69_right_042416.csv", stringsAsFactors=FALSE)
+l80.1 <- read.csv("c80_left_071316.csv", stringsAsFactors=FALSE)
+r80.1 <- read.csv("c80_right_071316.csv", stringsAsFactors=FALSE)
+l81.7 <- read.csv("c81_left_071916.csv", stringsAsFactors=FALSE) #
+r81.7 <- read.csv("c81_right_071916.csv", stringsAsFactors=FALSE)
+l83.12 <- read.csv("c83_left_110416.csv", stringsAsFactors=FALSE) #
+r83.12 <- read.csv("c83_right_110416.csv", stringsAsFactors=FALSE)
+l83.1 <- read.csv("c83_left_102416.csv", stringsAsFactors=FALSE) #
+r83.1 <- read.csv("c83_right_102416.csv", stringsAsFactors=FALSE)
+l85.8 <- read.csv("c85_left_120616.csv", stringsAsFactors=FALSE) #
+r85.8 <- read.csv("c85_right_120616.csv", stringsAsFactors=FALSE)
+l86.7 <- read.csv("c86_left_120516.csv", stringsAsFactors=FALSE) #
+r86.7 <- read.csv("c86_right_120516.csv", stringsAsFactors=FALSE)
+l86.1 <- read.csv("c86_left_112916.csv", stringsAsFactors=FALSE) #
+r86.1 <- read.csv("c86_right_112916.csv", stringsAsFactors=FALSE)
+### CHECK WE HAVE ALL MINUTES ON BOTH SIDES:
+### Reminder - each side must have 17292 rows of data - do they?
+#12 * 1441  = 17292
+getdf(l36.9,r36.9)
+getdf(l37.6,r37.6)    #changes red light  on left side at 719 not 720 --> FIXED
+getdf(l38.17,r38.17)
+getdf(l39.22,r39.22) #changes red light  on left side at 721 not 720 --> FIXED
+getdf(l44.8,r44.8)
+getdf(l45.14,r45.14)
+getdf(l46.20,r46.20)
+getdf(l69.1,r69.1)
+getdf(l80.1,r80.1)
+getdf(l81.7,r81.7) #changes red light  on left side at 719 not 720 --> FIXED
+getdf(l83.12,r83.12)
+getdf(l83.1,r83.1)
+getdf(l86.7,r86.7)  #changes red light  on left side at 721 not 720 --> FIXED
+getdf(l86.1,r86.1) #changes red light on left side at 721 not 720 --> FIXED
+getdf(l85.8,r85.8)   #changes red light on left side at 721 not 720 --> FIXED
+### Add cohort ids.
+df37.1 <- read.csv("cohort37_day1_01.csv") %>% rename(subject=mouse) %>% select(7,1:6)
+df36.9 <- getdf(l36.9,r36.9)[[1]] %>% mutate(cohort=36, day=9)
+df37.6 <- getdf(l37.6,r37.6)[[1]]  %>% mutate(cohort=37, day=6)
+df38.17 <- getdf(l38.17,r38.17)[[1]] %>% mutate(cohort=38, day=17)
+df39.22 <- getdf(l39.22,r39.22)[[1]] %>% mutate(cohort=39, day=22)
+df44.8 <- getdf(l44.8,r44.8)[[1]]  %>% mutate(cohort=44, day=8)
+df45.14 <- getdf(l45.14,r45.14)[[1]]  %>% mutate(cohort=45, day=14)
+df46.20 <- getdf(l46.20,r46.20)[[1]]  %>% mutate(cohort=46, day=20)
+df69.1 <- getdf(l69.1,r69.1)[[1]]   %>% mutate(cohort=69, day=1)
+df80.1 <- getdf(l80.1,r80.1)[[1]]  %>% mutate(cohort=80, day=1)
+df81.7 <- getdf(l81.7,r81.7)[[1]]  %>% mutate(cohort=81, day=7)
+df83.12 <- getdf(l83.12,r83.12)[[1]]  %>% mutate(cohort=83, day=12)
+df83.1 <- getdf(l83.1,r83.1)[[1]]  %>% mutate(cohort=83, day=1)
+df86.7 <- getdf(l86.7,r86.7)[[1]]  %>% mutate(cohort=86, day=7) #
+df86.1 <- getdf(l86.1,r86.1)[[1]]  %>% mutate(cohort=86, day=1)
+df85.8 <- getdf(l85.8,r85.8)[[1]]  %>% mutate(cohort=85, day=8)
+glickos <- read.csv("glicko_ontheday.csv", stringsAsFactors=FALSE)
+head(glickos)
+table(glickos$grank,glickos$cohort)
+## e.g. who is missing from day 1
+# cohort 83: 12;
+# cohort 37: 11,12;
+# cohort 69: 11,12;
+# cohort 80: 12;
+# cohort 83: 12;
+### This works out what mouseid is missing for which cohort/day and adds them back in and recalculates ranks
+glickos <- glickos %>% mutate(day = ontheday, groupid = paste(cohort,day, sep="."))
+glickos1 <- Filter(function(x) length(x) != 0,
+Filter(function(x) nrow(x) > 0,
+glickos  %>% split(list(.$cohort,.$day))
+) %>%
+map(~ setdiff(1:12,.$mouse))
+)  %>%
+map(~ data.frame(mouse = ., Rating=2200,grank=NA)) %>%
+Map(cbind, ., groupid=names(.)) %>%
+data.table::rbindlist(.) %>%
+rbind(., glickos %>% select(mouse,Rating,grank,groupid)) %>%
+group_by(groupid) %>% arrange(-Rating) %>%
+mutate(grank1=row_number(),
+cohort = gsub("\\..*","", groupid),
+day = sub('.*\\.', '', groupid)) %>%
+ungroup() %>% arrange(cohort,day,grank1)
+table(glickos1$grank1,glickos1$cohort) #check it worked.
+### ADD in rank data to raw data.----
+dfdf <-  rbind(df37.1,df36.9,df37.6,df38.17,
+df39.22, df44.8,df45.14,df46.20,
+df69.1,df80.1,df81.7, df83.12,
+df83.1,df86.1,df86.7,df85.8) #update this with new data
+dfdf$mouse <- as.numeric(gsub("M","", dfdf$subject)) #remove M
+dfdf$subject<-NULL
+dfdf$eating <- ifelse(dfdf$eating==0,0,1) #if ate both sides, add in only 1 so data are 0/1
+dfdf$drinking <- ifelse(dfdf$drinking==0,0,1) #ditto
+glickos1$cohort <- as.numeric(as.character(glickos1$cohort))
+glickos1$day <- as.numeric(as.character(glickos1$day))
+head(dfdf)
+head(glickos1)
+dfdf <- dfdf %>% left_join(glickos1 %>% select(mouse,cohort,day,grank1))
+head(dfdf)
+dfdf[is.na(dfdf$grank1),]
+table(dfdf$grank1)
+write.table(dfdf, "eatdrink.csv", row.names=F, sep=",")
+setwd("C:/Users/Won/Dropbox/Won/Data_Food intake pattern/cleandata/")
+dfdf <- read.csv("eatdrink.csv", stringsAsFactors = F)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumeat = cumsum(eating)) %>%
+group_by(grank1,realtime) %>%
+summarise(medianeat = median(cumeat)) %>%
+ggplot(., aes(x=realtime, y =medianeat, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=1)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumdrink = cumsum(drinking)) %>%
+group_by(grank1,realtime) %>%
+summarise(mediandrink = median(cumdrink)) %>%
+ggplot(., aes(x=realtime, y =mediandrink, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=1)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumdrink = cumsum(drinking)) %>%
+group_by(grank1,realtime) %>%
+summarise(meandrink = mean(cumdrink)) %>%
+ggplot(., aes(x=realtime, y =meandrink, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=1)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumdrink = cumsum(drinking)) %>%
+mutate(newday = ifelse(day==1, 1, 2)) %>%
+group_by(grank1,realtime,newday) %>%
+summarise(meandrink = mean(cumdrink)) %>%
+ggplot(., aes(x=realtime, y =meandrink, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=1) +
+facet_wrap(~newday)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumeat = cumsum(eating)) %>%
+group_by(grank1,realtime) %>%
+summarise(meaneat = mean(cumeat)) %>%
+ggplot(., aes(x=realtime, y =meaneat, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=.5)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumeat = cumsum(eating)) %>%
+mutate(newday = ifelse(day==1, 1, 2)) %>%
+group_by(grank1,realtime,newday) %>%
+summarise(meaneat = mean(cumeat)) %>%
+ggplot(., aes(x=realtime, y =meaneat, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=1) +
+facet_wrap(~newday)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(rollchange =  zoo::rollsum(drinking,120,fill=NA,align='right')) %>%
+group_by(grank1,realtime) %>%
+summarise(meanchange = mean(rollchange,na.rm=T)) %>%
+ggplot(., aes(x=realtime, y =meanchange, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=.5)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumeat = cumsum(eating)) %>%
+group_by(grank1,realtime) %>%
+summarise(meaneat = mean(cumeat)) %>%
+ggplot(., aes(x=realtime, y =meaneat, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=.5)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumdrink = cumsum(drinking)) %>%
+mutate(newday = ifelse(day==1, 1, 2)) %>%
+group_by(grank1,realtime,newday) %>%
+summarise(meandrink = mean(cumdrink)) %>%
+ggplot(., aes(x=realtime, y =meandrink, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=1) +
+facet_wrap(~newday)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumeat = cumsum(eating)) %>%
+group_by(grank1,realtime) %>%
+summarise(meaneat = mean(cumeat)) %>%
+ggplot(., aes(x=realtime, y =meaneat, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=.5)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumeat = cumsum(eating)) %>%
+mutate(newday = ifelse(day==1, 1, 2)) %>%
+group_by(grank1,realtime,newday) %>%
+summarise(meaneat = mean(cumeat)) %>%
+ggplot(., aes(x=realtime, y =meaneat, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=1) +
+facet_wrap(~newday)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumeat = cumsum(eating)) %>%
+group_by(grank1,realtime) %>%
+summarise(medianeat = median(cumeat)) %>%
+ggplot(., aes(x=realtime, y =medianeat, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=1)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumdrink = cumsum(drinking)) %>%
+group_by(grank1,realtime) %>%
+summarise(mediandrink = median(cumdrink)) %>%
+ggplot(., aes(x=realtime, y =mediandrink, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=1)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumdrink = cumsum(drinking)) %>%
+group_by(grank1,realtime) %>%
+summarise(meandrink = mean(cumdrink)) %>%
+ggplot(., aes(x=realtime, y =meandrink, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=1)
+dfdf %>% group_by(cohort,day,grank1) %>%
+mutate(cumeat = cumsum(eating)) %>%
+group_by(grank1,realtime) %>%
+summarise(meaneat = mean(cumeat)) %>%
+ggplot(., aes(x=realtime, y =meaneat, color=factor(grank1), group=factor(grank1))) +
+geom_line(lwd=.5)
+setwd("C:/Users/curley1/Dropbox/Work/Social Dominance/Won/Data_Food intake pattern/duration_data/")
+fd <- read_csv("final_duaration.csv")
+setwd(#setwd("C:/Users/Won/Dropbox/Won/Data_Food intake pattern/duration_data/")
+setwd("C:/Users/Won/Dropbox/Won/Data_Food intake pattern/duration_data/")
+)
+setwd("C:/Users/Won/Dropbox/Won/Data_Food intake pattern/duration_data/")
+fd <- read_csv("final_duaration.csv")
+library(tidyverse)
+fd$mouse <- as.numeric(gsub("M","", fd$id))
+head(fd)
+fd1 <- fd %>% left_join(glickos1) #from feeding/drinking script
+fd1 %>% group_by(cohort,day,mouse,times,behav) %>% summarise(total = n()) %>% arrange(-total)
+fd1 %>% filter(cohort==81 & day==7 & mouse==3 & times==15)
+fd2 <- splitstackshape::cSplit(fd1, "Duration_sf", ",", direction="long")
+head(fd2, 10)
+fd2 %>%
+group_by(cohort,day,behav,times,grank1,mouse) %>%
+summarise(total = sum(Duration_sf), bouts = n()) -> fd3
+fd3 %>% arrange(-total)  #how can they be over 60s ???
+fd %>% filter(times==636)
+fd3 %>%
+#  filter(total<=60) %>%
+ggplot(aes(factor(grank1), total)) +
+geom_boxplot(outlier.size = .5) +
+facet_wrap(~behav) +
+theme_classic()
+fd3 %>% arrange(-total)
+summary<-fd3 %>% mutate(total=replace(total,total>60,60))
+summary %>% arrange(-total)
+write.csv(summary,"duration_summary.csv",row.names = NA)
+write.csv(summary,"duration_summary.csv",row.names = F)

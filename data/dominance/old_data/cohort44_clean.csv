@@ -1,0 +1,922 @@
+Timestamp,Actor,Behavior,Recipient,Location,Observer
+10/6/2015 12:14:00,2,Chasing,6,"LL, LR",MT
+10/6/2015 12:29:00,2,Chasing,3,"ML, MR",MT
+10/6/2015 12:32:00,7,Chasing,2,"UL, UR",MT
+10/6/2015 12:32:00,7,Fighting,2,UR,MT
+10/6/2015 12:34:00,2,Chasing,9,"UR, MR",MT
+10/6/2015 12:36:00,2,"Fighting, Chasing",7,UR,MT
+10/6/2015 12:38:00,7,Fighting,1,UL,MT
+10/6/2015 12:43:00,7,"Fighting, Chasing, Mounting",6,"UR, MR",MT
+10/6/2015 12:44:00,7,"Fighting, Chasing, Mounting",9,MR,MT
+10/6/2015 12:46:00,7,"Fighting, Chasing",2,"UR, MR",MT
+10/6/2015 12:48:00,7,"Fighting, Chasing",2,UR,MT
+10/6/2015 12:49:00,7,Fighting,3,UR,MT
+10/6/2015 12:50:00,7,"Fighting, Induce-flee",3,UR,MT
+10/6/2015 12:54:00,2,"Fighting, Mounting",3,UR,MT
+10/6/2015 12:57:00,7,"Fighting, Chasing",10,UR,MT
+10/6/2015 12:58:00,2,"Fighting, Chasing",5,"UR, MR",MT
+10/6/2015 13:05:00,4,"Fighting, Chasing",3,"ML, UR, MR",MT
+10/6/2015 13:08:00,2,Chasing,5,"UR, MR",MT
+10/6/2015 13:17:00,7,Chasing,10,ML,MT
+10/6/2015 13:34:00,2,Fighting,1,UR,MT
+10/6/2015 13:35:00,7,"Fighting, Chasing",2,"UL, UR",MT
+10/6/2015 13:42:00,8,"Fighting, Chasing",3,UL,MT
+10/6/2015 13:43:00,8,Mounting,12,UL,MT
+10/6/2015 13:45:00,2,"Fighting, Subordinate",1,UR,MT
+10/6/2015 13:50:00,8,Fighting,3,UR,MT
+10/6/2015 13:52:00,8,Fighting,3,UR,MT
+10/6/2015 13:52:00,8,Chasing,12,"UR, MR",MT
+10/7/2015 12:46:00,8,Chasing,6,LL,CC
+10/7/2015 12:47:00,8,Chasing,6,"MR, LR",CC
+10/7/2015 12:58:00,7,Mounting,12,UR,CC
+10/7/2015 13:02:00,8,"Chasing, Mounting",5,"LR, NB4, NB5",CC
+10/7/2015 13:02:00,8,Fighting,3,NB5,CC
+10/7/2015 13:06:00,8,Fighting,2,"LL, LR",CC
+10/7/2015 13:22:00,2,Fighting,11,NB5,CC
+10/7/2015 13:29:00,8,Fighting,3,MR,CC
+10/7/2015 13:32:00,10,Fighting,3,LL,CC
+10/7/2015 13:35:00,8,Fighting,10,LR,CC
+10/7/2015 13:39:00,8,Chasing,6,UR,CC
+10/7/2015 13:41:00,8,Chasing,1,"LR, NB3, NB4",CC
+10/7/2015 13:41:00,8,Fighting,1,NB3,CC
+10/7/2015 13:42:00,8,"Fighting, Chasing",1,"LL, LR",CC
+10/7/2015 14:07:00,2,"Fighting, Chasing",12,"LL, NB1, NB2",CC
+10/7/2015 14:09:00,2,Fighting,12,NB5,CC
+10/7/2015 14:10:00,2,Fighting,12,NB2,CC
+10/7/2015 14:34:00,2,Fighting,12,"LL, LR, NB2, NB3",CC
+10/8/2015 12:05:00,8,Chasing,6,"NB3, NB4",BN
+10/8/2015 12:07:00,8,Fighting,7,NB2,BN
+10/8/2015 12:08:00,8,Subordinate,10,LL,BN
+10/8/2015 12:10:00,8,Fighting,3,MR,BN
+10/8/2015 12:23:00,7,Fighting,3,UR,BN
+10/8/2015 12:24:00,2,Fighting,7,UR,BN
+10/8/2015 12:34:00,2,Fighting,11,UL,BN
+10/8/2015 12:36:00,2,Fighting,7,MR,BN
+10/8/2015 12:38:00,8,"Fighting, Chasing",12,"UL, UR",BN
+10/8/2015 12:38:00,8,Subordinate,5,UR,BN
+10/8/2015 12:41:00,8,Subordinate,12,UR,BN
+10/8/2015 12:43:00,8,"Fighting, Subordinate",2,UL,BN
+10/8/2015 12:52:00,8,Fighting,7,MR,BN
+10/8/2015 12:57:00,8,Subordinate,10,LL,BN
+10/8/2015 12:58:00,8,Fighting,7,"LR, NB4",BN
+10/8/2015 12:59:00,2,Subordinate,1,MR,BN
+10/8/2015 13:00:00,8,Fighting,12,LL,BN
+10/8/2015 13:02:00,8,Fighting,12,UR,BN
+10/8/2015 13:02:00,8,Fighting,2,UR,BN
+10/8/2015 13:05:00,2,Fighting,11,"ML, MR",BN
+10/8/2015 13:07:00,2,Fighting,1,LL,BN
+10/8/2015 13:14:00,11,Fighting,10,NB5,BN
+10/8/2015 13:21:00,2,Fighting,7,LR,BN
+10/9/2015 13:07:00,8,"Fighting, Chasing",12,UR,CW
+10/9/2015 13:14:00,8,"Fighting, Chasing",12,MR,CW
+10/9/2015 13:15:00,8,Chasing,7,LR,CW
+10/9/2015 13:17:00,8,"Fighting, Chasing",11,LR,CW
+10/9/2015 13:17:00,7,Fighting,9,LL,CW
+10/9/2015 13:20:00,8,Chasing,1,NB3,CW
+10/9/2015 13:20:00,8,"Fighting, Subordinate",3,NB2,CW
+10/9/2015 13:29:00,"4, 9",Fighting,"4, 9",LL,CW
+10/9/2015 13:37:00,11,"Fighting, Subordinate",3,NB1,CW
+10/9/2015 13:42:00,8,"Fighting, Chasing",11,LL,CW
+10/9/2015 13:44:00,8,"Fighting, Chasing",1,NB2,CW
+10/9/2015 13:45:00,8,"Fighting, Chasing, Subordinate",7,NB1,CW
+10/9/2015 13:49:00,8,Chasing,1,LL,CW
+10/9/2015 13:50:00,8,Fighting,10,LL,CW
+10/9/2015 13:51:00,8,"Fighting, Chasing, Subordinate",10,LR,CW
+10/9/2015 14:13:00,7,Chasing,6,NB1,CW
+10/9/2015 14:17:00,7,"Fighting, Chasing",5,ML,CW
+10/9/2015 15:45:00,6,"Fighting, Chasing",12,MR,XX
+10/9/2015 15:26:00,2,Chasing,9,LR,CW
+10/9/2015 15:27:00,8,"Fighting, Chasing",2,LL,CW
+10/9/2015 15:30:00,2,Fighting,10,NB3,CW
+10/9/2015 15:33:00,2,"Fighting, Chasing, Subordinate",9,LL,XX
+10/9/2015 15:33:00,2,"Fighting, Chasing, Subordinate",9,LL,XX
+10/9/2015 15:36:00,2,"Fighting, Chasing, Subordinate",9,LL,XX
+10/9/2015 15:36:00,8,Induce-flee,2,LL,XX
+10/9/2015 15:37:00,2,"Fighting, Chasing",7,UL,XX
+10/9/2015 15:37:00,2,"Fighting, Chasing",7,UL,XX
+10/9/2015 15:38:00,8,Induce-flee,2,MR,XX
+10/9/2015 15:44:00,8,"Fighting, Chasing",12,LL,XX
+10/9/2015 15:44:00,8,"Fighting, Chasing",12,LL,XX
+10/9/2015 15:44:00,7,Fighting,"6, 9",LR,XX
+10/9/2015 15:46:00,2,"Fighting, Chasing",7,LL,XX
+10/9/2015 15:49:00,2,"Fighting, Chasing",9,LL,XX
+10/10/2015 12:08:00,8,"Fighting, Chasing",10,"LL, LR",MT
+10/10/2015 12:09:00,8,Chasing,12,"LL, LR",MT
+10/10/2015 12:15:00,2,Chasing,11,"LL, LR",MT
+10/10/2015 12:17:00,2,"Fighting, Chasing, Subordinate",8,"LL, NB2",MT
+10/10/2015 12:17:00,8,"Fighting, Chasing",2,ML,MT
+10/10/2015 12:24:00,8,"Fighting, Chasing, Subordinate",2,"UL, UR",MT
+10/10/2015 12:27:00,10,Fighting,3,UR,MT
+10/10/2015 12:29:00,2,"Fighting, Chasing",4,"LL, NB2",MT
+10/10/2015 12:35:00,8,"Fighting, Chasing",11,"LR, NB3",MT
+10/10/2015 12:42:00,2,"Fighting, Chasing",9,"LL, NB1, NB2, NB4, NB5",MT
+10/10/2015 12:48:00,2,Chasing,9,"LL, NB2",MT
+10/10/2015 12:50:00,2,Induce-flee,7,UL,MT
+10/10/2015 12:51:00,7,Chasing,1,"MR, LR",MT
+10/10/2015 12:54:00,2,Chasing,12,"UL, UR",MT
+10/10/2015 12:54:00,2,"Fighting, Chasing, Subordinate",7,"LL, NB2",MT
+10/10/2015 12:57:00,8,Chasing,4,"LL, NB2",MT
+10/10/2015 12:57:00,2,Fighting,7,LR,MT
+10/10/2015 12:57:00,2,"Fighting, Chasing",10,"LL, LR",MT
+10/10/2015 12:58:00,2,Chasing,9,"MR, LR",MT
+10/10/2015 13:00:00,7,Fighting,3,NB5,MT
+10/10/2015 13:00:00,7,Fighting,12,NB3,MT
+10/10/2015 13:00:00,7,Fighting,3,NB3,MT
+10/10/2015 13:01:00,7,"Fighting, Subordinate",9,NB4,MT
+10/10/2015 13:01:00,7,Fighting,1,NB4,MT
+10/10/2015 13:02:00,7,"Fighting, Chasing, Mounting",10,"NB4, NB5",MT
+10/10/2015 13:10:00,8,Induce-flee,6,LL,MT
+10/10/2015 13:11:00,8,Chasing,2,"UR, MR",MT
+10/10/2015 13:12:00,2,Chasing,7,"UL, ML",MT
+10/10/2015 13:14:00,8,Chasing,2,"LL, NB2",MT
+10/10/2015 13:15:00,8,Fighting,12,NB5,MT
+10/10/2015 13:16:00,8,Fighting,12,NB3,MT
+10/10/2015 13:17:00,2,"Fighting, Chasing, Subordinate",7,"LL, NB2",MT
+10/10/2015 13:18:00,8,Subordinate,4,NB2,MT
+10/10/2015 13:41:00,8,Chasing,10,"NB1, NB4, NB5",MT
+10/10/2015 13:45:00,4,Chasing,9,"UR, MR, LR",MT
+10/10/2015 13:50:00,8,Chasing,7,LR,MT
+10/10/2015 13:53:00,2,Chasing,4,"LR, NB3, NB4, NB5",MT
+10/10/2015 13:55:00,2,Chasing,6,"LL, LR",MT
+10/10/2015 13:57:00,2,"Fighting, Chasing",10,LR,MT
+10/11/2015 13:00:00,11,"Fighting, Chasing",4,NB5,KP
+10/11/2015 13:01:00,8,"Chasing, Mounting, Subordinate",9,NB1,KP
+10/11/2015 13:02:00,2,"Fighting, Chasing",7,UR,KP
+10/11/2015 13:03:00,7,"Fighting, Chasing",5,LR,KP
+10/11/2015 13:03:00,2,"Fighting, Chasing",7,LL,KP
+10/11/2015 13:04:00,8,Fighting,2,LL,KP
+10/11/2015 13:10:00,7,Chasing,3,UR,KP
+10/11/2015 13:15:00,8,"Fighting, Chasing",5,NB2,KP
+10/11/2015 13:18:00,2,"Fighting, Chasing",1,MR,KP
+10/11/2015 13:19:00,2,"Fighting, Chasing",1,LR,KP
+10/11/2015 13:24:00,8,"Chasing, Induce-flee",7,ML,KP
+10/11/2015 13:25:00,8,"Fighting, Chasing",12,NB4,KP
+10/11/2015 13:26:00,8,"Fighting, Chasing",7,LL,KP
+10/11/2015 13:28:00,7,Fighting,12,LR,KP
+10/11/2015 13:29:00,4,"Fighting, Chasing",7,UR,KP
+10/11/2015 13:29:00,2,"Fighting, Chasing",7,LR,KP
+10/11/2015 13:35:00,2,"Fighting, Induce-flee",1,LR,KP
+10/11/2015 13:36:00,2,Chasing,12,LL,KP
+10/11/2015 13:43:00,12,Chasing,3,NB2,KP
+10/11/2015 13:45:00,8,"Fighting, Chasing",2,MR,KP
+10/11/2015 13:48:00,2,"Fighting, Chasing",7,LL,KP
+10/11/2015 13:51:00,8,Induce-flee,3,LL,KP
+10/11/2015 13:53:00,8,Chasing,3,LR,KP
+10/11/2015 13:58:00,8,Fighting,12,LR,KP
+10/11/2015 13:59:00,8,"Fighting, Chasing",12,LL,KP
+10/11/2015 14:01:00,8,"Fighting, Chasing",2,LR,KP
+10/11/2015 14:03:00,8,Chasing,4,LL,KP
+10/11/2015 14:13:00,8,"Fighting, Chasing, Subordinate",7,All over,KP
+10/11/2015 14:16:00,8,"Fighting, Chasing",4,LR,KP
+10/11/2015 14:20:00,2,"Fighting, Chasing",7,LR,KP
+10/11/2015 14:22:00,2,Fighting,12,LR,KP
+10/11/2015 14:32:00,11,Chasing,3,LL,KP
+10/11/2015 14:33:00,2,"Fighting, Chasing",7,LR,KP
+10/11/2015 14:41:00,2,"Fighting, Induce-flee",11,LR,KP
+10/11/2015 14:42:00,2,"Fighting, Chasing",4,LL,KP
+10/11/2015 14:42:00,2,"Fighting, Chasing",7,UL,KP
+10/11/2015 14:43:00,8,"Fighting, Chasing",2,NB5,KP
+10/11/2015 14:43:00,11,"Fighting, Chasing",10,NB4,KP
+10/11/2015 14:47:00,2,"Fighting, Chasing",1,UR,KP
+10/12/2015 12:07:00,2,"Fighting, Chasing",7,ML,KB
+10/12/2015 12:09:00,7,Fighting,4,NB4,KB
+10/12/2015 12:13:00,7,Fighting,4,LL,KB
+10/12/2015 12:14:00,7,"Fighting, Chasing",4,All over,KB
+10/12/2015 12:15:00,7,Induce-flee,4,LL,KB
+10/12/2015 12:15:00,8,Chasing,2,LR,KB
+10/12/2015 12:16:00,7,Chasing,2,UL,KB
+10/12/2015 12:25:00,8,"Fighting, Chasing",7,LL,KB
+10/12/2015 12:26:00,8,"Fighting, Chasing",7,LR,KB
+10/12/2015 12:32:00,7,"Fighting, Chasing",4,LR,KB
+10/12/2015 12:43:00,8,Fighting,7,NB4,KB
+10/12/2015 12:53:00,12,Chasing,4,LR,KB
+10/12/2015 12:54:00,8,"Fighting, Chasing",12,ML,KB
+10/12/2015 12:55:00,7,Fighting,4,NB2,KB
+10/12/2015 12:58:00,8,Fighting,12,LR,KB
+10/12/2015 13:04:00,2,"Fighting, Chasing",7,UR,KB
+10/12/2015 13:13:00,7,Chasing,4,All over,KB
+10/12/2015 13:16:00,8,"Fighting, Chasing",1,LL,KB
+10/12/2015 13:35:00,7,Fighting,10,UR,KB
+10/12/2015 13:49:00,8,Fighting,2,LL,KB
+10/12/2015 13:50:00,8,"Fighting, Chasing",7,LL,KB
+10/12/2015 13:56:00,8,Fighting,2,NB1,KB
+10/13/2015 12:13:00,8,"Fighting, Chasing",6,"LL, LR",CW
+10/13/2015 12:14:00,8,Chasing,7,"UL, ML",CW
+10/13/2015 12:15:00,8,"Fighting, Chasing",12,LR,CW
+10/13/2015 12:15:00,8,Fighting,12,UL,CW
+10/13/2015 12:18:00,8,"Fighting, Chasing",12,LR,CW
+10/13/2015 12:19:00,8,Chasing,12,"UL, ML, LL",CW
+10/13/2015 12:23:00,8,Fighting,3,UR,CW
+10/13/2015 12:25:00,2,Chasing,7,UR,CW
+10/13/2015 12:27:00,8,Chasing,1,LR,CW
+10/13/2015 12:28:00,8,"Fighting, Chasing",1,NB2,CW
+10/13/2015 12:31:00,8,Chasing,2,LR,CW
+10/13/2015 12:31:00,8,Chasing,7,NB4,CW
+10/13/2015 12:34:00,8,Chasing,3,UR,CW
+10/13/2015 12:38:00,2,Fighting,7,LL,CW
+10/13/2015 12:39:00,8,"Fighting, Chasing",12,LR,CW
+10/13/2015 12:42:00,8,Fighting,12,NB1,CW
+10/13/2015 12:43:00,8,Fighting,11,NB1,CW
+10/13/2015 12:44:00,8,"Fighting, Chasing",10,NB3,CW
+10/13/2015 12:45:00,7,Chasing,12,UL,CW
+10/13/2015 12:46:00,8,Fighting,10,NB1,CW
+10/13/2015 12:46:00,8,Fighting,12,NB3,CW
+10/13/2015 12:50:00,8,Fighting,12,UL,CW
+10/13/2015 12:56:00,7,Chasing,11,MR,CW
+10/13/2015 14:00:00,11,"Fighting, Chasing",3,MR,CW
+10/13/2015 14:01:00,11,Fighting,7,NB5,CW
+10/13/2015 14:04:00,11,Fighting,3,NB3,CW
+10/13/2015 14:05:00,11,Chasing,9,NB1,CW
+10/13/2015 14:08:00,8,Fighting,11,LL,CW
+10/13/2015 14:13:00,7,Chasing,1,UL,CW
+10/13/2015 14:18:00,8,"Fighting, Chasing",5,LL,CW
+10/13/2015 14:19:00,2,Chasing,7,UR,CW
+10/13/2015 14:20:00,7,Fighting,5,NB4,CW
+10/13/2015 14:22:00,8,Chasing,7,MR,CW
+10/13/2015 14:23:00,8,Fighting,7,LL,CW
+10/13/2015 14:25:00,2,Chasing,7,UL,CW
+10/13/2015 14:26:00,8,Fighting,9,MR,CW
+10/13/2015 14:29:00,8,Chasing,2,UL,CW
+10/13/2015 14:33:00,2,Chasing,7,UR,CW
+10/13/2015 14:36:00,8,Fighting,10,LR,CW
+10/13/2015 14:38:00,8,Chasing,1,NB2,CW
+10/13/2015 14:38:00,11,Chasing,4,LR,CW
+10/13/2015 14:43:00,7,"Fighting, Chasing",11,UL,CW
+10/13/2015 14:47:00,8,Chasing,5,LL,CW
+10/13/2015 14:57:00,7,Fighting,6,NB2,CW
+10/13/2015 14:58:00,7,Chasing,11,LR,CW
+10/13/2015 14:59:00,11,Chasing,6,NB1,CW
+10/14/2015 12:17:00,8,"Fighting, Chasing",2,LL,HD
+10/14/2015 12:28:00,8,"Fighting, Mounting",7,NB4,HD
+10/14/2015 12:30:00,8,Chasing,7,"LL, LR",HD
+10/14/2015 12:33:00,2,Chasing,7,UR,HD
+10/14/2015 12:40:00,2,Chasing,7,MR,HD
+10/14/2015 12:45:00,2,Chasing,7,"LL, LR",HD
+10/14/2015 12:58:00,7,Chasing,4,"LL, MR, LR",HD
+10/14/2015 13:02:00,7,Chasing,3,All over,HD
+10/14/2015 13:03:00,8,Chasing,12,"MR, LR",HD
+10/14/2015 13:04:00,2,Chasing,7,"UL, UR, MR",HD
+10/14/2015 13:06:00,2,Chasing,7,"UL, UR",HD
+10/14/2015 13:09:00,8,Chasing,12,"NB1, NB3, NB4, NB5",HD
+10/14/2015 13:12:00,2,Fighting,7,LL,HD
+10/14/2015 13:15:00,11,Chasing,4,"LL, LR, NB2",HD
+10/14/2015 13:25:00,7,Fighting,4,NB2,HD
+10/14/2015 13:48:00,7,Fighting,4,"LL, LR",HD
+10/15/2015 12:04:00,8,Subordinate,5,LR,WL
+10/15/2015 12:06:00,8,Chasing,7,LR,WL
+10/15/2015 12:06:00,8,"Fighting, Chasing, Subordinate",7,LR,WL
+10/15/2015 12:07:00,8,"Fighting, Subordinate",7,NB2,WL
+10/15/2015 12:07:00,8,Chasing,5,NB5,WL
+10/15/2015 12:09:00,8,"Fighting, Chasing, Subordinate",1,LR,WL
+10/15/2015 12:11:00,7,"Chasing, Mounting, Subordinate",9,NB1,WL
+10/15/2015 12:13:00,7,"Fighting, Chasing, Subordinate",6,NB5,WL
+10/15/2015 12:15:00,8,Subordinate,12,NB5,WL
+10/15/2015 12:18:00,2,Chasing,7,ML,WL
+10/15/2015 12:18:00,8,"Fighting, Chasing",7,LR,WL
+10/15/2015 12:18:00,8,"Fighting, Subordinate",7,NB2,WL
+10/15/2015 12:19:00,8,"Fighting, Chasing, Subordinate",7,"NB1, NB2",WL
+10/15/2015 12:19:00,8,Subordinate,7,NB2,WL
+10/15/2015 12:20:00,8,"Fighting, Chasing",7,"NB4, NB5",WL
+10/15/2015 12:21:00,7,Subordinate,12,NB5,WL
+10/15/2015 12:21:00,8,Subordinate,10,NB4,WL
+10/15/2015 12:23:00,2,"Fighting, Chasing",7,ML,WL
+10/15/2015 12:23:00,2,Chasing,11,LL,WL
+10/15/2015 12:26:00,8,Induce-flee,12,LL,WL
+10/15/2015 12:26:00,7,Mounting,9,NB5,WL
+10/15/2015 12:30:00,2,"Chasing, Subordinate",11,LL,WL
+10/15/2015 12:31:00,2,Chasing,10,LR,WL
+10/15/2015 12:34:00,8,"Subordinate, Induce-flee",2,LR,WL
+10/15/2015 12:36:00,8,Induce-flee,7,LL,WL
+10/15/2015 12:36:00,8,Induce-flee,7,LL,WL
+10/15/2015 12:38:00,8,"Fighting, Chasing",6,LL,WL
+10/15/2015 12:39:00,2,"Fighting, Chasing",11,UR,WL
+10/15/2015 12:41:00,5,"Fighting, Subordinate",4,LR,WL
+10/15/2015 12:42:00,2,Chasing,7,LL,WL
+10/15/2015 12:42:00,8,Subordinate,5,LR,WL
+10/15/2015 12:42:00,8,Chasing,7,"LL, LR",WL
+10/15/2015 12:44:00,2,"Fighting, Chasing",7,UR,WL
+10/15/2015 12:46:00,7,Chasing,12,MR,WL
+10/15/2015 12:46:00,7,Chasing,4,LR,WL
+10/15/2015 12:47:00,7,"Fighting, Chasing",12,All over,WL
+10/15/2015 12:47:00,11,"Fighting, Chasing, Subordinate",4,LR,WL
+10/15/2015 12:48:00,11,Fighting,4,LR,WL
+10/15/2015 12:48:00,11,Chasing,3,LR,WL
+10/15/2015 12:48:00,2,"Fighting, Chasing",11,LR,WL
+10/15/2015 12:50:00,7,"Fighting, Chasing",10,LR,WL
+10/15/2015 12:50:00,2,"Fighting, Chasing",9,LL,WL
+10/15/2015 12:51:00,2,"Fighting, Chasing, Subordinate",7,All over,WL
+10/15/2015 12:51:00,8,Subordinate,7,NB5,WL
+10/15/2015 12:54:00,2,Chasing,4,LR,WL
+10/15/2015 12:54:00,5,Chasing,6,LL,WL
+10/15/2015 12:55:00,5,Subordinate,4,LR,WL
+10/15/2015 12:56:00,5,Fighting,6,LR,WL
+10/15/2015 12:56:00,2,Subordinate,5,LR,WL
+10/15/2015 12:57:00,8,"Fighting, Chasing, Mounting, Subordinate",5,LR,WL
+10/15/2015 12:57:00,8,Chasing,1,LL,WL
+10/15/2015 12:57:00,8,Subordinate,7,NB2,XX
+10/15/2015 12:57:00,8,"Fighting, Chasing",7,NB5,WL
+10/15/2015 12:58:00,8,"Fighting, Chasing",2,LR,WL
+10/15/2015 13:00:00,2,Subordinate,3,ML,WL
+10/15/2015 13:01:00,11,"Fighting, Chasing, Subordinate",1,"NB2, NB4, NB5",WL
+10/15/2015 13:02:00,11,Fighting,3,"NB1, NB5",WL
+10/15/2015 13:05:00,3,Chasing,1,ML,WL
+10/15/2015 13:06:00,7,Subordinate,3,ML,WL
+10/15/2015 13:08:00,8,Subordinate,3,ML,WL
+10/15/2015 13:12:00,8,Chasing,11,LL,WL
+10/15/2015 13:12:00,8,Subordinate,11,NB3,WL
+10/15/2015 13:13:00,8,"Fighting, Subordinate",11,NB3,WL
+10/15/2015 13:14:00,8,Chasing,12,MR,WL
+10/15/2015 13:16:00,8,Chasing,12,MR,WL
+10/15/2015 13:21:00,8,Fighting,11,All over,WL
+10/15/2015 13:24:00,5,Subordinate,1,UL,WL
+10/15/2015 13:25:00,8,Chasing,5,LL,WL
+10/15/2015 13:26:00,7,"Fighting, Chasing",3,"UL, UR",WL
+10/15/2015 13:27:00,7,Chasing,3,ML,WL
+10/15/2015 13:30:00,8,Chasing,7,UL,WL
+10/15/2015 13:33:00,8,Chasing,7,UR,WL
+10/15/2015 13:33:00,7,"Chasing, Mounting",6,"UL, ML",WL
+10/15/2015 13:33:00,8,Chasing,7,"UL, ML",WL
+10/15/2015 13:35:00,8,Subordinate,2,LR,WL
+10/15/2015 13:38:00,2,"Fighting, Chasing",11,"MR, LR",WL
+10/15/2015 13:39:00,8,"Fighting, Subordinate",2,LR,WL
+10/15/2015 13:39:00,2,"Fighting, Chasing",7,All over,WL
+10/15/2015 13:41:00,8,"Fighting, Chasing",1,NB2,WL
+10/15/2015 13:42:00,8,Chasing,11,UR,WL
+10/15/2015 13:46:00,8,Fighting,7,LL,WL
+10/15/2015 13:48:00,8,"Fighting, Chasing, Subordinate",12,"NB1, NB5",WL
+10/15/2015 13:49:00,8,Chasing,12,NB1,WL
+10/15/2015 13:50:00,8,"Chasing, Subordinate",7,NB3,WL
+10/15/2015 13:52:00,2,Chasing,7,LR,WL
+10/15/2015 13:52:00,2,Fighting,7,UL,WL
+10/15/2015 13:52:00,8,Chasing,7,UL,WL
+10/15/2015 13:53:00,8,"Fighting, Subordinate",7,NB2,WL
+10/17/2015 17:27:00,8,"Fighting, Chasing",5,LL,WL
+10/17/2015 17:29:00,2,"Fighting, Chasing",7,"UL, UR",WL
+10/17/2015 17:29:00,12,Chasing,3,UR,WL
+10/17/2015 17:33:00,8,Chasing,7,UR,WL
+10/17/2015 17:37:00,8,Chasing,10,LL,WL
+10/17/2015 17:38:00,8,Chasing,9,LL,WL
+10/17/2015 17:40:00,3,Chasing,4,MR,WL
+10/17/2015 17:43:00,8,Chasing,10,LR,WL
+10/17/2015 17:43:00,4,"Fighting, Chasing",10,LR,WL
+10/17/2015 17:46:00,7,Chasing,4,"ML, MR",WL
+10/17/2015 17:46:00,7,Induce-flee,3,MR,WL
+10/17/2015 17:47:00,11,"Fighting, Chasing",3,"MR, LR",WL
+10/17/2015 17:47:00,11,"Fighting, Chasing",4,"UL, ML, LL",WL
+10/17/2015 17:48:00,11,"Fighting, Subordinate",4,LR,WL
+10/17/2015 17:48:00,11,Fighting,4,LR,WL
+10/17/2015 17:50:00,8,Chasing,3,ML,WL
+10/17/2015 17:51:00,10,"Fighting, Chasing",9,"LL, LR, NB2",WL
+10/17/2015 17:54:00,1,"Fighting, Chasing",9,"MR, LR",WL
+10/17/2015 17:54:00,8,Chasing,7,LL,WL
+10/17/2015 17:54:00,8,"Fighting, Chasing",5,"LL, LR",WL
+10/17/2015 17:54:00,8,"Fighting, Subordinate",5,LR,WL
+10/17/2015 17:57:00,7,"Mounting, Subordinate",6,NB2,WL
+10/17/2015 17:59:00,8,Chasing,12,LL,WL
+10/17/2015 18:00:00,8,Chasing,9,UL,WL
+10/17/2015 18:02:00,7,"Fighting, Chasing, Mounting, Subordinate",9,All over,WL
+10/17/2015 18:04:00,1,Subordinate,9,LL,WL
+10/17/2015 18:05:00,11,"Fighting, Chasing",4,"UL, ML, LL, UR",WL
+10/17/2015 18:06:00,11,Chasing,3,"ML, LL",WL
+10/17/2015 18:06:00,11,Induce-flee,3,UL,WL
+10/17/2015 18:10:00,8,Chasing,7,UL,WL
+10/17/2015 18:12:00,8,Subordinate,10,LR,WL
+10/17/2015 18:22:00,10,"Fighting, Chasing",9,"NB1, NB2",WL
+10/17/2015 18:30:00,11,Fighting,1,NB5,WL
+10/17/2015 18:30:00,8,Fighting,11,NB5,WL
+10/17/2015 18:32:00,7,"Fighting, Chasing",1,"LL, LR",WL
+10/17/2015 18:52:00,7,Chasing,1,UL,WL
+10/17/2015 18:57:00,7,"Fighting, Subordinate",6,NB2,WL
+10/17/2015 18:57:00,7,"Fighting, Subordinate",2,NB2,WL
+10/17/2015 18:58:00,7,"Fighting, Subordinate",3,NB2,WL
+10/17/2015 18:58:00,7,"Fighting, Subordinate",2,NB2,WL
+10/17/2015 19:03:00,7,"Fighting, Chasing, Subordinate",3,"NB1, NB2",WL
+10/17/2015 19:03:00,7,"Fighting, Subordinate",3,NB2,WL
+10/17/2015 19:05:00,7,Induce-flee,10,LL,WL
+10/17/2015 19:08:00,2,"Fighting, Chasing",7,"UL, ML",WL
+10/17/2015 19:08:00,2,Fighting,7,NB2,WL
+10/17/2015 19:09:00,2,"Fighting, Chasing",7,"UL, ML, LL, NB2",WL
+10/17/2015 19:09:00,2,"Fighting, Chasing",7,"UL, ML",WL
+10/17/2015 19:09:00,2,Chasing,1,"LL, LR",WL
+10/17/2015 19:10:00,2,"Fighting, Subordinate",7,LR,WL
+10/17/2015 19:10:00,2,"Fighting, Chasing",1,"LL, LR",WL
+10/17/2015 19:13:00,2,"Fighting, Chasing, Subordinate",7,All over,WL
+10/17/2015 19:13:00,2,Chasing,7,LR,WL
+10/17/2015 19:13:00,2,Chasing,4,UL,WL
+10/17/2015 19:14:00,2,Subordinate,1,UR,WL
+10/18/2015 16:06:00,2,Chasing,3,UL,KB
+10/18/2015 16:15:00,5,"Fighting, Chasing",3,NB5,KB
+10/18/2015 16:38:00,2,Chasing,7,UL,KB
+10/18/2015 16:43:00,2,Fighting,11,LL,KB
+10/18/2015 16:44:00,7,Chasing,6,MR,KB
+10/18/2015 16:47:00,1,Fighting,6,UL,KB
+10/18/2015 16:49:00,2,Fighting,11,UR,KB
+10/18/2015 16:51:00,2,Chasing,3,UL,KB
+10/18/2015 16:54:00,2,"Fighting, Chasing",7,ML,KB
+10/18/2015 17:04:00,9,Chasing,6,NB1,KB
+10/18/2015 17:25:00,"1, 11",Fighting,"1, 11",NB1,KB
+10/18/2015 17:25:00,8,Fighting,1,NB3,KB
+10/18/2015 17:28:00,8,Chasing,7,ML,KB
+10/18/2015 17:32:00,1,"Fighting, Chasing",12,LR,KB
+10/18/2015 17:38:00,1,"Fighting, Chasing",6,LL,KB
+10/18/2015 17:44:00,8,"Fighting, Chasing",11,LL,KB
+10/19/2015 12:04:00,2,Fighting,12,LL,KB
+10/19/2015 12:11:00,6,Chasing,12,LR,KB
+10/19/2015 12:13:00,8,"Fighting, Chasing",4,LR,KB
+10/19/2015 12:15:00,8,"Fighting, Chasing",5,LL,KB
+10/19/2015 12:18:00,7,Fighting,12,NB4,KB
+10/19/2015 12:19:00,8,"Fighting, Chasing",7,ML,KB
+10/19/2015 12:20:00,2,"Fighting, Chasing",7,UL,KB
+10/19/2015 12:22:00,7,Chasing,11,LL,KB
+10/19/2015 12:23:00,8,Chasing,7,UR,KB
+10/19/2015 12:37:00,2,Chasing,7,LL,KB
+10/19/2015 12:42:00,12,Fighting,3,UL,KB
+10/19/2015 12:51:00,11,"Fighting, Chasing",3,MR,KB
+10/19/2015 12:57:00,8,Subordinate,5,ML,KB
+10/19/2015 12:59:00,8,Chasing,11,LR,KB
+10/19/2015 13:01:00,8,Subordinate,5,NB2,KB
+10/19/2015 13:05:00,3,Fighting,6,ML,KB
+10/19/2015 13:45:00,3,"Fighting, Chasing",6,UL,KB
+10/19/2015 13:58:00,6,Chasing,12,LL,KB
+10/19/2015 13:59:00,8,Chasing,7,ML,KB
+10/20/2015 12:09:00,2,Fighting,7,"LL, NB2",HD
+10/20/2015 12:13:00,2,Chasing,7,UR,HD
+10/20/2015 12:14:00,2,"Fighting, Chasing",7,All over,HD
+10/20/2015 12:16:00,2,Fighting,11,LL,HD
+10/20/2015 12:16:00,2,"Fighting, Chasing",7,All over,HD
+10/20/2015 12:24:00,2,Fighting,7,LR,HD
+10/20/2015 12:28:00,2,Chasing,5,"LL, LR",HD
+10/20/2015 12:33:00,7,Mounting,3,ML,HD
+10/20/2015 12:53:00,3,Chasing,1,"UL, UR",HD
+10/20/2015 12:55:00,8,Chasing,7,"UL, UR",HD
+10/20/2015 12:58:00,8,Chasing,5,"LL, LR",HD
+10/20/2015 13:00:00,8,Fighting,2,LR,HD
+10/20/2015 13:02:00,8,Chasing,7,"ML, LL",HD
+10/21/2015 12:35:00,7,Chasing,5,"ML, LL, LR",CC
+10/21/2015 12:40:00,7,Chasing,3,"MR, LR",CC
+10/21/2015 12:41:00,8,Fighting,12,NB5,CC
+10/21/2015 12:43:00,7,Chasing,5,"UR, MR",CC
+10/21/2015 12:43:00,7,Chasing,12,"MR, LR",CC
+10/21/2015 12:45:00,7,"Fighting, Chasing",5,"MR, LR",CC
+10/21/2015 12:46:00,7,"Fighting, Chasing",12,"ML, MR",CC
+10/21/2015 12:47:00,11,Chasing,6,"LL, LR",CC
+10/21/2015 12:54:00,2,Chasing,5,"ML, MR",CC
+10/21/2015 12:57:00,2,Chasing,12,"LR, NB4, NB5",CC
+10/21/2015 12:59:00,2,"Chasing, Mounting",11,"ML, MR, LR",CC
+10/21/2015 13:00:00,7,Chasing,5,"UL, ML, LL",CC
+10/21/2015 13:02:00,8,Induce-flee,1,"LL, LR",CC
+10/21/2015 13:10:00,3,"Fighting, Chasing",10,"UR, MR, LR",CC
+10/21/2015 13:12:00,3,"Fighting, Chasing",7,"MR, LR",CC
+10/21/2015 13:14:00,10,Chasing,12,"UL, UR",CC
+10/21/2015 13:16:00,2,Chasing,7,"ML, UR, MR",CC
+10/21/2015 13:18:00,2,Mounting,12,LR,CC
+10/21/2015 13:20:00,8,"Fighting, Chasing",1,"LL, NB1, NB3, NB5",CC
+10/21/2015 13:20:00,8,Chasing,6,"NB1, NB4, NB5",CC
+10/21/2015 13:26:00,2,Mounting,12,LL,CC
+10/21/2015 13:27:00,2,Fighting,12,LR,CC
+10/21/2015 13:28:00,8,Fighting,2,LR,CC
+10/21/2015 13:34:00,8,Chasing,6,"NB4, NB5",CC
+10/21/2015 13:43:00,3,Chasing,7,"UL, UR",CC
+10/21/2015 13:44:00,3,Chasing,6,"LL, LR",CC
+10/21/2015 13:50:00,2,Chasing,7,ML,CC
+10/21/2015 13:53:00,8,Chasing,7,"ML, LL",CC
+10/21/2015 13:53:00,8,Chasing,7,"UL, UR",CC
+10/21/2015 13:55:00,7,Chasing,5,"ML, LL",CC
+10/21/2015 13:57:00,8,Chasing,7,"UL, UR",CC
+10/21/2015 13:59:00,2,Chasing,7,"ML, UR, MR",CC
+10/21/2015 14:00:00,8,Chasing,7,UR,CC
+10/21/2015 14:01:00,8,Chasing,7,"UL, UR",CC
+10/21/2015 14:06:00,2,Fighting,11,LR,CC
+10/21/2015 14:06:00,7,Chasing,5,"LL, LR",CC
+10/21/2015 14:06:00,8,Chasing,7,LR,CC
+10/21/2015 14:12:00,7,Chasing,5,"UL, ML, LL",CC
+10/21/2015 14:13:00,8,Chasing,7,UR,CC
+10/21/2015 14:22:00,8,Chasing,11,"LL, LR",CC
+10/22/2015 13:01:00,7,"Fighting, Chasing",4,LR,CW
+10/22/2015 13:02:00,7,Fighting,4,LR,CW
+10/22/2015 13:03:00,7,Chasing,1,LR,CW
+10/22/2015 13:03:00,7,Chasing,1,LL,CW
+10/22/2015 13:06:00,7,Fighting,4,MR,CW
+10/22/2015 13:06:00,7,"Fighting, Chasing",4,LR,CW
+10/22/2015 13:07:00,7,"Fighting, Chasing",5,ML,CW
+10/22/2015 13:07:00,7,Fighting,5,LR,CW
+10/22/2015 13:07:00,8,Chasing,7,LL,CW
+10/22/2015 13:08:00,8,"Fighting, Chasing",2,LR,CW
+10/22/2015 13:08:00,2,Chasing,7,ML,CW
+10/22/2015 13:09:00,8,Fighting,4,MR,CW
+10/22/2015 13:11:00,8,Chasing,7,ML,CW
+10/22/2015 13:12:00,11,Chasing,4,UL,CW
+10/22/2015 13:13:00,11,Chasing,1,UR,CW
+10/22/2015 13:14:00,11,Fighting,4,MR,CW
+10/22/2015 13:14:00,12,Chasing,3,UL,CW
+10/22/2015 13:17:00,11,"Fighting, Chasing",3,UR,CW
+10/22/2015 13:19:00,7,"Fighting, Chasing",10,LL,CW
+10/22/2015 13:19:00,8,"Fighting, Chasing",7,LR,CW
+10/22/2015 13:19:00,8,Chasing,11,ML,CW
+10/22/2015 13:26:00,8,Chasing,7,UR,CW
+10/22/2015 13:31:00,7,"Fighting, Chasing",5,UR,CW
+10/22/2015 13:34:00,8,Chasing,12,LL,CW
+10/22/2015 13:34:00,8,Chasing,7,UL,CW
+10/22/2015 13:39:00,11,Fighting,3,MR,CW
+10/22/2015 13:59:00,8,Fighting,12,LR,CW
+10/22/2015 13:59:00,8,"Fighting, Chasing",7,LR,CW
+10/22/2015 14:00:00,8,"Fighting, Chasing",1,"LL, LR",CW
+10/22/2015 14:04:00,8,"Fighting, Chasing",1,NB2,CW
+10/22/2015 14:14:00,7,Chasing,12,MR,CW
+10/22/2015 14:15:00,11,Fighting,1,NB2,CW
+10/22/2015 14:18:00,7,Fighting,11,LR,CW
+10/22/2015 14:22:00,8,"Fighting, Chasing",5,NB1,CW
+10/22/2015 14:25:00,7,"Fighting, Chasing",9,LR,CW
+10/22/2015 14:28:00,7,"Fighting, Chasing",12,LL,CW
+10/22/2015 14:29:00,11,Chasing,1,MR,CW
+10/22/2015 14:30:00,8,Chasing,7,LL,CW
+10/22/2015 14:31:00,1,Fighting,11,NB2,CW
+10/22/2015 14:40:00,11,Chasing,4,ML,CW
+10/22/2015 14:42:00,7,"Fighting, Chasing",5,LL,CW
+10/22/2015 14:43:00,8,"Fighting, Chasing",7,ML,CW
+10/22/2015 14:45:00,7,Chasing,5,UL,CW
+10/22/2015 14:46:00,11,Chasing,1,UL,CW
+10/22/2015 14:50:00,8,"Fighting, Chasing",7,LR,CW
+10/22/2015 14:51:00,3,"Fighting, Chasing",6,LR,CW
+10/22/2015 14:51:00,9,"Fighting, Chasing",3,LL,CW
+10/22/2015 14:55:00,8,"Fighting, Chasing",5,NB5,CW
+10/22/2015 14:55:00,8,"Fighting, Chasing",5,NB1,CW
+10/22/2015 14:56:00,11,"Fighting, Chasing",3,MR,CW
+10/22/2015 14:59:00,11,Fighting,1,UR,CW
+10/23/2015 13:17:00,8,"Fighting, Chasing",7,UR,XX
+10/23/2015 13:18:00,12,Chasing,11,MR,KP
+10/23/2015 13:18:00,8,"Fighting, Chasing, Induce-flee",6,LR,KP
+10/23/2015 13:19:00,8,Chasing,2,LR,KP
+10/23/2015 13:19:00,7,"Fighting, Chasing",12,UL,KP
+10/23/2015 13:21:00,8,"Fighting, Subordinate",2,LR,KP
+10/23/2015 13:23:00,8,Induce-flee,12,LL,KP
+10/23/2015 13:26:00,6,"Fighting, Chasing",12,ML,KP
+10/23/2015 13:32:00,8,Chasing,10,LL,KP
+10/23/2015 13:37:00,6,"Fighting, Chasing",12,MR,KP
+10/23/2015 13:40:00,11,Chasing,3,LR,KP
+10/23/2015 13:41:00,1,"Fighting, Chasing, Subordinate",9,NB1,KP
+10/23/2015 13:41:00,2,"Fighting, Chasing",7,UL,KP
+10/23/2015 13:44:00,6,"Fighting, Chasing",12,MR,KP
+10/23/2015 13:44:00,2,"Fighting, Chasing",6,LR,KP
+10/23/2015 13:48:00,2,"Fighting, Chasing",7,LL,KP
+10/23/2015 13:49:00,2,"Fighting, Chasing",11,ML,KP
+10/23/2015 13:52:00,1,"Fighting, Chasing",6,NB3,KP
+10/23/2015 13:54:00,1,"Fighting, Chasing",2,UR,KP
+10/23/2015 13:55:00,8,"Fighting, Chasing",7,LR,KP
+10/23/2015 13:56:00,2,"Fighting, Chasing",7,MR,KP
+10/23/2015 13:58:00,8,"Fighting, Chasing",2,MR,KP
+10/23/2015 13:58:00,11,Fighting,3,MR,KP
+10/23/2015 14:00:00,1,"Fighting, Chasing",6,LR,KP
+10/23/2015 14:01:00,8,"Fighting, Chasing",7,MR,KP
+10/23/2015 14:03:00,2,"Fighting, Chasing",7,MR,KP
+10/23/2015 14:07:00,8,"Fighting, Chasing",7,UR,KP
+10/23/2015 14:19:00,1,Fighting,4,UR,KP
+10/23/2015 14:21:00,11,Fighting,7,LR,KP
+10/23/2015 14:22:00,5,"Fighting, Chasing",1,LR,KP
+10/23/2015 14:38:00,8,Chasing,3,UL,KP
+10/24/2015 12:18:00,7,"Fighting, Chasing",12,"UL, ML, LL, LR",CC
+10/24/2015 12:22:00,2,Chasing,7,"UR, MR",CC
+10/24/2015 12:25:00,7,Fighting,2,UL,CC
+10/24/2015 12:26:00,8,Chasing,7,"UL, UR",CC
+10/24/2015 12:31:00,8,Chasing,7,"UL, UR",CC
+10/24/2015 12:39:00,3,Chasing,4,"UL, UR",CC
+10/24/2015 12:42:00,6,Chasing,12,"UR, MR, LR",CC
+10/24/2015 12:50:00,8,Induce-flee,11,"LL, LR",CC
+10/24/2015 12:51:00,7,Chasing,5,"UL, ML",CC
+10/24/2015 13:05:00,8,Fighting,12,"NB4, NB5",CC
+10/24/2015 13:08:00,7,Chasing,10,"MR, LR",CC
+10/24/2015 13:09:00,3,Fighting,1,"MR, LR",CC
+10/24/2015 13:11:00,7,Chasing,5,"UL, ML, LL, LR",CC
+10/24/2015 13:17:00,7,Chasing,11,"UL, ML, LL, LR",CC
+10/24/2015 13:18:00,7,"Fighting, Chasing",12,"UL, ML, LL, UR, MR, LR",CC
+10/24/2015 13:27:00,10,Fighting,1,"NB1, NB4, NB5",CC
+10/24/2015 13:29:00,8,Chasing,7,"UL, ML",CC
+10/24/2015 13:30:00,6,Chasing,12,"UR, MR, LR",CC
+10/24/2015 13:32:00,8,Chasing,7,"UL, ML, UR",CC
+10/24/2015 13:39:00,12,Chasing,1,"UL, UR, MR, LR",CC
+10/24/2015 13:56:00,8,Chasing,7,"UL, UR",CC
+10/24/2015 13:57:00,8,Chasing,12,"LL, LR",CC
+10/24/2015 14:08:00,10,Fighting,6,LR,CC
+10/25/2015 14:08:00,1,"Fighting, Chasing",10,LL,KB
+10/25/2015 14:09:00,11,Fighting,1,UR,KB
+10/25/2015 14:11:00,11,"Fighting, Chasing",10,LR,KB
+10/25/2015 14:11:00,3,Fighting,6,ML,KB
+10/25/2015 14:12:00,11,"Fighting, Chasing",6,LL,KB
+10/25/2015 14:14:00,3,Chasing,6,UR,KB
+10/25/2015 14:14:00,1,"Fighting, Chasing",10,LR,KB
+10/25/2015 14:15:00,3,Chasing,10,UL,KB
+10/25/2015 14:16:00,3,"Fighting, Chasing",6,ML,KB
+10/25/2015 14:26:00,12,Chasing,6,UL,KB
+10/25/2015 14:29:00,12,Fighting,3,UL,KB
+10/25/2015 14:34:00,3,"Fighting, Chasing",6,ML,KB
+10/25/2015 14:35:00,7,Fighting,5,MR,KB
+10/25/2015 14:36:00,11,Chasing,1,LL,KB
+10/25/2015 14:44:00,7,Chasing,5,LL,KB
+10/25/2015 14:51:00,11,Chasing,1,LL,KB
+10/25/2015 14:58:00,8,Chasing,11,MR,KB
+10/25/2015 15:50:00,11,Chasing,4,ML,KB
+10/25/2015 15:57:00,12,"Fighting, Chasing",6,UL,KB
+10/26/2015 18:09:00,4,Fighting,12,"MR, LR",WL
+10/26/2015 18:10:00,7,"Fighting, Chasing",11,"LL, LR",WL
+10/26/2015 18:17:00,"7, 8","Fighting, Chasing","7, 8",UR,WL
+10/26/2015 18:17:00,"7, 8","Fighting, Chasing","7, 8",UR,WL
+10/26/2015 18:18:00,6,"Fighting, Chasing",9,MR,WL
+10/26/2015 18:20:00,6,Chasing,9,UL,WL
+10/26/2015 18:20:00,6,"Fighting, Chasing",9,UR,WL
+10/26/2015 18:21:00,6,"Fighting, Chasing",9,LR,WL
+10/26/2015 18:22:00,4,"Fighting, Chasing",12,ML,WL
+10/26/2015 18:23:00,8,Chasing,9,NB4,WL
+10/26/2015 18:23:00,1,"Fighting, Chasing",4,LR,WL
+10/26/2015 18:24:00,8,Induce-flee,7,LR,WL
+10/26/2015 18:24:00,11,Chasing,1,LL,WL
+10/26/2015 18:24:00,6,"Fighting, Chasing",12,"LL, MR, LR",WL
+10/26/2015 18:25:00,6,"Fighting, Chasing",12,UR,WL
+10/26/2015 18:27:00,"7, 8","Fighting, Chasing","7, 8",UR,WL
+10/26/2015 18:28:00,8,Chasing,7,ML,WL
+10/26/2015 18:29:00,7,Chasing,5,UR,WL
+10/26/2015 18:30:00,7,Chasing,11,UR,WL
+10/26/2015 18:32:00,8,"Fighting, Chasing",11,LL,WL
+10/26/2015 18:32:00,8,Chasing,2,"LL, NB2",XX
+10/26/2015 18:33:00,7,Chasing,11,UL,WL
+10/26/2015 18:34:00,1,Chasing,10,UL,WL
+10/26/2015 18:34:00,1,Fighting,6,UL,WL
+10/26/2015 18:37:00,7,Induce-flee,6,MR,WL
+10/26/2015 18:38:00,1,Chasing,5,LR,WL
+10/26/2015 18:38:00,8,"Fighting, Chasing",6,"NB4, NB5",WL
+10/26/2015 18:39:00,5,"Fighting, Chasing",1,"LL, LR",WL
+10/26/2015 18:39:00,8,Chasing,5,"LL, LR",WL
+10/26/2015 18:39:00,8,"Fighting, Chasing",5,LL,WL
+10/26/2015 18:40:00,8,Chasing,1,LL,WL
+10/26/2015 18:41:00,5,"Fighting, Chasing",1,"LL, LR",WL
+10/26/2015 18:41:00,8,Chasing,5,LL,WL
+10/26/2015 18:42:00,11,"Fighting, Chasing",2,NB2,WL
+10/26/2015 18:43:00,8,"Chasing, Subordinate",2,LR,WL
+10/26/2015 18:44:00,5,"Fighting, Chasing, Subordinate",1,"LL, LR",WL
+10/26/2015 18:44:00,5,Fighting,1,LR,WL
+10/26/2015 18:44:00,7,"Fighting, Chasing",5,UL,WL
+10/26/2015 18:46:00,5,"Fighting, Chasing",1,"LL, LR",WL
+10/26/2015 18:48:00,7,"Fighting, Chasing",6,LR,WL
+10/26/2015 18:48:00,7,"Fighting, Chasing",10,LL,WL
+10/26/2015 18:49:00,7,Chasing,5,LR,WL
+10/26/2015 18:49:00,7,Subordinate,1,LR,WL
+10/26/2015 18:50:00,7,Chasing,10,"UL, UR",WL
+10/26/2015 18:52:00,1,"Fighting, Chasing",10,NB1,WL
+10/26/2015 18:53:00,1,Fighting,5,NB1,WL
+10/26/2015 18:53:00,7,"Fighting, Chasing",10,MR,WL
+10/26/2015 18:54:00,8,Chasing,2,LL,WL
+10/26/2015 18:54:00,8,Induce-flee,7,LL,WL
+10/26/2015 18:55:00,8,Chasing,7,LR,WL
+10/26/2015 18:56:00,7,Chasing,2,LL,WL
+10/26/2015 18:56:00,8,"Fighting, Chasing",7,LR,WL
+10/26/2015 18:57:00,8,Chasing,7,UL,WL
+10/26/2015 18:59:00,7,"Chasing, Mounting",10,UR,WL
+10/26/2015 19:01:00,7,Chasing,6,UL,WL
+10/26/2015 19:03:00,8,Chasing,7,ML,WL
+10/26/2015 19:04:00,1,"Fighting, Chasing",10,UR,WL
+10/26/2015 19:04:00,8,Subordinate,7,ML,WL
+10/26/2015 19:09:00,"7, 8","Fighting, Chasing","7, 8","UL, ML, MR",WL
+10/26/2015 19:11:00,1,Fighting,10,NB2,WL
+10/26/2015 19:13:00,7,Chasing,11,LL,WL
+10/26/2015 19:14:00,11,Chasing,10,LR,WL
+10/26/2015 19:17:00,6,"Fighting, Chasing",10,"LL, LR",WL
+10/26/2015 19:25:00,1,Chasing,10,LR,WL
+10/26/2015 19:26:00,7,Induce-flee,6,LL,WL
+10/26/2015 19:31:00,10,Fighting,3,NB2,WL
+10/26/2015 19:35:00,1,Chasing,9,"NB3, NB4, NB5",WL
+10/26/2015 19:35:00,11,"Chasing, Subordinate",1,"LL, LR",WL
+10/26/2015 19:37:00,1,"Fighting, Chasing",6,LR,WL
+10/26/2015 19:37:00,7,Induce-flee,11,LL,WL
+10/26/2015 19:41:00,1,"Fighting, Chasing",6,UL,WL
+10/26/2015 19:47:00,10,Mounting,9,NB2,WL
+10/26/2015 19:54:00,7,Chasing,2,LL,WL
+10/26/2015 19:57:00,11,"Fighting, Chasing",4,"NB1, NB5",WL
+10/26/2015 19:57:00,11,Fighting,4,NB1,WL
+10/27/2015 12:06:00,7,"Fighting, Chasing",8,"UL, UR",MT
+10/27/2015 12:08:00,7,"Fighting, Chasing, Subordinate",8,"UL, UR",MT
+10/27/2015 12:12:00,7,"Fighting, Chasing, Subordinate",5,"MR, LR, NB1, NB3, NB4, NB5",MT
+10/27/2015 12:20:00,1,Chasing,10,"ML, MR, LR",MT
+10/27/2015 12:25:00,6,Chasing,5,"UL, ML, MR",MT
+10/27/2015 12:26:00,7,Chasing,12,All over,MT
+10/27/2015 12:27:00,7,"Fighting, Subordinate",12,NB2,MT
+10/27/2015 12:30:00,7,"Fighting, Subordinate",5,NB2,MT
+10/27/2015 12:31:00,7,"Fighting, Chasing",2,"LL, LR",MT
+10/27/2015 12:34:00,6,Chasing,5,UR,MT
+10/27/2015 12:34:00,6,Chasing,5,"UL, UR",MT
+10/27/2015 12:38:00,7,"Fighting, Chasing",5,"UL, ML, UR, MR",MT
+10/27/2015 12:40:00,7,"Fighting, Chasing",11,"LL, MR, LR, NB2",MT
+10/27/2015 12:42:00,7,Fighting,11,NB2,MT
+10/27/2015 12:43:00,6,Fighting,11,ML,MT
+10/27/2015 12:46:00,7,Chasing,5,All over,MT
+10/27/2015 12:46:00,7,Fighting,5,NB5,MT
+10/27/2015 12:48:00,7,"Fighting, Subordinate",8,NB2,MT
+10/27/2015 12:49:00,1,Chasing,9,"MR, LR, NB1, NB3, NB4, NB5",MT
+10/27/2015 12:55:00,6,Chasing,11,"UL, UR",MT
+10/27/2015 12:56:00,7,Chasing,11,UR,MT
+10/27/2015 12:56:00,7,Chasing,6,"LL, LR",MT
+10/27/2015 13:03:00,6,Chasing,10,"LL, LR",MT
+10/27/2015 13:06:00,7,Fighting,11,UR,MT
+10/27/2015 13:16:00,7,"Fighting, Chasing",2,"UR, MR, LR",MT
+10/27/2015 13:19:00,5,Chasing,6,"ML, MR",MT
+10/27/2015 13:20:00,5,"Fighting, Chasing",6,"UL, UR",MT
+10/27/2015 13:21:00,5,"Fighting, Chasing",1,LL,MT
+10/27/2015 13:23:00,7,Chasing,2,"LL, MR, LR",MT
+10/27/2015 13:24:00,6,"Fighting, Chasing",12,"LL, LR",MT
+10/27/2015 13:28:00,7,Fighting,5,LR,MT
+10/27/2015 13:29:00,7,"Fighting, Subordinate",5,NB3,MT
+10/27/2015 13:29:00,7,"Fighting, Chasing",2,"NB1, NB5",MT
+10/27/2015 13:30:00,6,"Fighting, Chasing",12,"MR, LR, NB3",MT
+10/27/2015 13:37:00,6,Chasing,5,"ML, MR, LR",MT
+10/27/2015 13:40:00,7,Fighting,11,LL,MT
+10/27/2015 13:40:00,7,"Fighting, Subordinate",1,LL,MT
+10/27/2015 13:45:00,7,"Fighting, Chasing",8,LL,MT
+10/27/2015 13:46:00,6,"Fighting, Chasing",12,"UL, UR",MT
+10/27/2015 13:46:00,6,Chasing,12,"NB3, NB4, NB5",MT
+10/27/2015 13:52:00,1,"Fighting, Chasing",4,"UL, ML, UR",MT
+10/27/2015 13:53:00,1,Chasing,4,"MR, LR",MT
+10/27/2015 13:55:00,6,Chasing,12,"LL, MR, LR",MT
+10/27/2015 14:00:00,1,Chasing,9,"MR, LR",MT
+10/27/2015 14:02:00,7,Subordinate,9,UR,MT
+10/27/2015 14:02:00,1,Chasing,9,"NB1, NB4, NB5",MT
+10/28/2015 14:13:00,11,Chasing,6,UL,KB
+10/28/2015 14:14:00,5,"Fighting, Chasing",4,LR,KB
+10/28/2015 14:14:00,11,Chasing,4,UR,KB
+10/28/2015 14:15:00,7,Chasing,11,MR,KB
+10/28/2015 14:17:00,12,Chasing,1,LR,KB
+10/28/2015 14:19:00,12,Fighting,1,UR,KB
+10/28/2015 14:21:00,7,Chasing,11,UR,KB
+10/28/2015 15:00:00,11,"Fighting, Mounting",1,UR,KB
+10/28/2015 15:02:00,12,Chasing,3,LL,KB
+10/28/2015 15:11:00,1,"Fighting, Chasing",9,NB5,KB
+10/28/2015 15:19:00,11,Fighting,3,NB2,KB
+10/28/2015 15:22:00,7,"Fighting, Chasing",8,LR,KB
+10/28/2015 15:32:00,2,Fighting,10,LR,KB
+10/28/2015 15:38:00,7,Fighting,11,NB2,KB
+10/28/2015 15:43:00,12,"Fighting, Chasing",9,LL,KB
+10/28/2015 15:55:00,6,"Fighting, Chasing",12,LR,KB
+10/29/2015 14:02:00,3,Fighting,1,UR,BN
+10/29/2015 14:02:00,7,Fighting,5,LR,BN
+10/29/2015 14:04:00,7,Fighting,4,LL,BN
+10/29/2015 14:05:00,7,Fighting,5,UL,BN
+10/29/2015 14:06:00,1,Fighting,6,MR,BN
+10/29/2015 14:07:00,7,Fighting,1,LR,BN
+10/29/2015 14:13:00,5,Chasing,"1, 4","MR, LR",BN
+10/29/2015 14:14:00,7,Fighting,5,"ML, MR",BN
+10/29/2015 14:16:00,3,Fighting,1,MR,BN
+10/29/2015 14:16:00,7,Fighting,5,NB3,BN
+10/29/2015 14:17:00,2,Fighting,6,UL,BN
+10/29/2015 14:19:00,5,Chasing,4,"ML, MR, LR",BN
+10/29/2015 14:20:00,7,Subordinate,2,LR,BN
+10/29/2015 14:20:00,7,Induce-flee,8,LL,BN
+10/29/2015 14:21:00,3,Fighting,1,UR,BN
+10/29/2015 14:22:00,7,Fighting,5,UL,BN
+10/29/2015 14:23:00,"2, 12",Fighting,"2, 12",MR,BN
+10/29/2015 14:24:00,7,Fighting,2,UL,BN
+10/29/2015 14:24:00,11,Fighting,8,UL,BN
+10/29/2015 14:26:00,11,Subordinate,8,UL,BN
+10/29/2015 14:26:00,11,Fighting,3,UR,BN
+10/29/2015 14:27:00,11,Fighting,12,UR,BN
+10/29/2015 14:27:00,"2, 12",Fighting,"2, 12",LR,BN
+10/29/2015 14:31:00,7,Fighting,2,LR,BN
+10/29/2015 14:31:00,7,Fighting,8,UL,BN
+10/29/2015 14:32:00,11,Fighting,12,MR,BN
+10/29/2015 14:33:00,7,Fighting,11,UL,BN
+10/29/2015 14:33:00,3,Fighting,10,LL,BN
+10/29/2015 14:35:00,7,Fighting,11,UR,BN
+10/29/2015 14:50:00,7,Fighting,11,NB2,BN
+10/29/2015 14:55:00,7,Fighting,6,LR,BN
+10/29/2015 14:55:00,7,Fighting,6,UL,BN
+10/29/2015 14:56:00,7,Induce-flee,4,UL,BN
+10/29/2015 14:56:00,7,Fighting,6,UL,BN
+10/29/2015 14:57:00,7,Fighting,8,LL,BN
+10/29/2015 14:58:00,7,Fighting,2,LL,BN
+10/29/2015 15:00:00,7,Subordinate,2,LL,BN
+10/29/2015 15:00:00,7,Fighting,8,LR,BN
+10/29/2015 15:01:00,7,Fighting,6,"UL, ML",BN
+10/29/2015 15:02:00,2,Fighting,6,ML,BN
+10/29/2015 15:02:00,7,Fighting,11,UR,BN
+10/29/2015 15:04:00,7,Induce-flee,4,MR,BN
+10/29/2015 15:04:00,7,Fighting,11,LL,BN
+10/29/2015 15:06:00,7,Fighting,6,UR,BN
+10/29/2015 15:08:00,7,Fighting,6,NB2,BN
+10/29/2015 15:10:00,1,Chasing,10,LR,BN
+10/29/2015 15:10:00,7,Fighting,2,LL,BN
+10/29/2015 15:12:00,7,Fighting,2,UL,BN
+10/29/2015 15:14:00,7,Induce-flee,3,LL,BN
+10/29/2015 15:19:00,7,Fighting,5,UL,BN
+10/29/2015 15:29:00,2,Fighting,12,UL,BN
+10/29/2015 15:33:00,2,Chasing,6,"UL, UR",BN
+10/29/2015 15:33:00,11,Fighting,4,NB1,BN
+10/29/2015 15:35:00,10,Fighting,9,LR,BN
+10/29/2015 15:35:00,2,Fighting,6,UL,BN
+10/29/2015 15:36:00,10,Subordinate,9,LL,BN
+10/29/2015 15:36:00,7,Fighting,12,MR,BN
+10/29/2015 15:38:00,7,Fighting,11,LR,BN
+10/29/2015 15:39:00,5,Fighting,6,UL,BN
+10/29/2015 15:40:00,10,Subordinate,9,LR,BN
+10/29/2015 15:40:00,11,Chasing,4,"UL, UR",BN
+10/29/2015 15:42:00,5,Fighting,6,UR,BN
+10/29/2015 15:43:00,5,Subordinate,6,UL,BN
+10/29/2015 15:43:00,11,Chasing,4,"UR, MR, LR",BN
+10/29/2015 15:47:00,7,Fighting,11,UR,BN
+10/29/2015 15:47:00,11,Mounting,1,NB2,BN
+10/29/2015 15:50:00,10,Mounting,9,LR,BN
+10/29/2015 15:51:00,2,Fighting,12,LL,BN
+10/30/2015 17:33:00,4,Fighting,9,"LL, LR",CC
+10/30/2015 17:34:00,4,"Fighting, Chasing",2,"UL, ML, LL, LR",CC
+10/30/2015 17:42:00,7,Fighting,4,UR,CC
+10/30/2015 17:43:00,11,Fighting,3,MR,CC
+10/30/2015 17:45:00,5,"Fighting, Chasing",12,"MR, LR",CC
+10/30/2015 17:47:00,11,Fighting,1,LR,CC
+10/30/2015 17:48:00,4,Fighting,10,"MR, LR",CC
+10/30/2015 17:48:00,12,Fighting,3,"UR, MR",CC
+10/30/2015 17:50:00,12,"Fighting, Chasing",10,"UL, UR",CC
+10/30/2015 17:53:00,11,Fighting,3,ML,CC
+10/30/2015 17:55:00,7,Chasing,5,"UL, ML, MR",CC
+10/30/2015 18:00:00,12,Fighting,6,UL,CC
+10/30/2015 18:01:00,12,Chasing,1,"UL, UR, MR, LR",CC
+10/30/2015 18:02:00,1,Fighting,9,LR,CC
+10/30/2015 18:02:00,1,Fighting,11,"MR, LR",CC
+10/30/2015 18:07:00,1,"Fighting, Chasing",10,"LL, LR",CC
+10/30/2015 18:08:00,7,"Fighting, Chasing",11,"UL, UR",CC
+10/30/2015 18:10:00,7,Fighting,11,NB2,CC
+10/30/2015 18:20:00,1,"Fighting, Chasing",10,"LL, LR",CC
+10/30/2015 18:21:00,1,Fighting,10,"MR, LR",CC
+10/30/2015 19:04:00,7,"Fighting, Chasing",5,"UL, ML, LL, UR, LR",CC
+10/30/2015 19:07:00,7,Fighting,8,NB2,CC
+10/30/2015 19:17:00,7,Chasing,5,"UL, ML, LL, LR",CC
+10/30/2015 19:25:00,7,Fighting,5,NB5,CC
+10/30/2015 19:25:00,7,Chasing,3,"LL, LR",CC
+10/30/2015 19:28:00,4,Fighting,3,NB2,CC
+10/30/2015 19:33:00,12,"Fighting, Chasing",6,"UL, UR",CC
+10/30/2015 19:34:00,12,Fighting,2,UL,CC
+10/30/2015 19:34:00,12,"Fighting, Chasing",6,"UL, UR",CC
+10/30/2015 19:35:00,12,Chasing,6,"UL, ML, UR, MR",CC
+10/30/2015 19:35:00,12,"Fighting, Chasing",2,"UL, UR, MR",CC
+10/30/2015 19:37:00,12,Chasing,6,"UL, UR",CC
+10/30/2015 19:38:00,7,"Fighting, Chasing",6,"UL, ML, UR",CC
+10/30/2015 19:39:00,7,Induce-flee,10,LR,CC
+10/30/2015 19:39:00,12,Chasing,6,"UL, UR",CC
+10/30/2015 19:40:00,5,Chasing,6,"UL, ML, LL, LR",CC
+10/30/2015 19:41:00,7,"Fighting, Chasing",5,"MR, LR",CC
+10/30/2015 19:45:00,12,Chasing,6,"UL, UR",CC
+10/30/2015 19:46:00,11,Fighting,2,NB5,CC
+10/30/2015 19:50:00,12,Chasing,6,"UL, UR",CC
+10/30/2015 19:52:00,11,Chasing,12,"UL, UR",CC
+10/30/2015 19:54:00,7,"Fighting, Chasing",5,"UL, ML, UR, MR",CC
+10/30/2015 19:56:00,7,"Fighting, Chasing",6,"UL, UR",CC
+11/1/2015 11:05:00,7,Subordinate,2,UL,WL
+11/1/2015 11:05:00,7,"Fighting, Chasing, Subordinate",8,UR,WL
+11/1/2015 11:06:00,7,"Fighting, Subordinate",8,NB2,WL
+11/1/2015 11:07:00,7,Fighting,8,NB2,WL
+11/1/2015 11:09:00,7,Chasing,2,UR,WL
+11/1/2015 11:14:00,7,Chasing,12,LR,WL
+11/1/2015 11:14:00,7,"Fighting, Chasing",11,UR,WL
+11/1/2015 11:15:00,2,Induce-flee,11,UL,WL
+11/1/2015 11:16:00,7,Induce-flee,2,UL,WL
+11/1/2015 11:20:00,12,"Fighting, Chasing",2,UR,WL
+11/1/2015 11:21:00,7,"Fighting, Chasing",8,UL,WL
+11/1/2015 11:30:00,12,Chasing,2,LR,WL
+11/1/2015 11:32:00,12,"Fighting, Chasing",4,"LL, LR",WL
+11/1/2015 11:32:00,12,"Fighting, Chasing",4,"UL, UR",WL
+11/1/2015 11:32:00,7,"Fighting, Chasing",12,LR,WL
+11/1/2015 11:33:00,7,"Chasing, Mounting",10,"UL, UR",WL
+11/1/2015 11:37:00,12,"Fighting, Chasing",10,UR,WL
+11/1/2015 11:37:00,12,"Chasing, Subordinate",3,ML,WL
+11/1/2015 11:38:00,7,"Chasing, Subordinate",6,UL,WL
+11/1/2015 11:38:00,7,"Fighting, Chasing",2,UL,WL
+11/1/2015 11:39:00,7,Chasing,2,"UL, UR",WL
+11/1/2015 11:40:00,12,"Fighting, Chasing, Subordinate",6,UR,WL
+11/1/2015 11:42:00,2,Subordinate,3,UL,WL
+11/1/2015 11:43:00,7,"Fighting, Chasing",6,UL,WL
+11/1/2015 11:43:00,7,"Fighting, Subordinate",6,ML,WL
+11/1/2015 11:43:00,10,"Fighting, Chasing",3,UR,WL
+11/1/2015 11:48:00,12,Chasing,3,UL,WL
+11/1/2015 11:48:00,12,"Fighting, Chasing",10,UL,WL
+11/1/2015 11:51:00,10,Chasing,3,UL,WL
+11/1/2015 11:51:00,10,Fighting,3,ML,WL
+11/1/2015 11:52:00,12,"Fighting, Chasing, Subordinate",3,MR,WL
+11/1/2015 11:53:00,12,"Fighting, Chasing",3,"ML, MR",WL
+11/1/2015 11:57:00,12,"Fighting, Chasing",10,"UL, ML, UR",WL
+11/1/2015 11:57:00,12,"Fighting, Chasing",10,All over,WL
+11/1/2015 11:57:00,7,"Fighting, Chasing",6,UL,WL
+11/1/2015 11:58:00,7,"Fighting, Chasing",12,LR,WL
+11/1/2015 11:58:00,7,"Fighting, Chasing",12,UL,WL
+11/1/2015 11:59:00,1,Chasing,10,UR,WL
+11/1/2015 12:00:00,12,"Fighting, Chasing, Subordinate",3,UR,WL
+11/1/2015 13:11:00,7,Fighting,6,UL,HD
+11/1/2015 13:18:00,"5, 11",Fighting,"5, 11",NB2,HD
+11/1/2015 13:22:00,12,Chasing,4,"MR, LR",HD
+11/1/2015 13:23:00,7,Chasing,11,"ML, UR, MR",HD
+11/1/2015 13:29:00,7,Fighting,11,NB2,HD
+11/1/2015 13:35:00,4,Chasing,10,"UL, ML",HD
+11/1/2015 13:51:00,"1, 6",Fighting,"1, 6",NB2,HD
+11/1/2015 14:05:00,7,Chasing,8,All over,HD
+11/1/2015 14:32:00,10,Chasing,3,"ML, MR",HD
+11/1/2015 14:43:00,12,Chasing,10,"UL, ML",HD
+11/1/2015 14:47:00,12,Fighting,6,UL,HD
+11/1/2015 14:54:00,12,Chasing,10,All over,HD
+11/1/2015 14:55:00,12,Chasing,9,All over,HD
+11/1/2015 14:56:00,12,"Fighting, Chasing",10,All over,HD
+11/1/2015 14:56:00,12,"Fighting, Chasing",6,UL,HD
+11/1/2015 14:57:00,12,Fighting,2,UL,HD
+11/1/2015 14:59:00,12,"Fighting, Chasing",10,All over,HD

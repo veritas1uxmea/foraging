@@ -1,0 +1,512 @@
+df83.1 <- getdf(l83.1,r83.1)[[1]]  %>% mutate(cohort=83, day=1)
+df86.7 <- getdf(l86.7,r86.7)[[1]]  %>% mutate(cohort=86, day=7) #
+df86.1 <- getdf(l86.1,r86.1)[[1]]  %>% mutate(cohort=86, day=1)
+df85.8 <- getdf(l85.8,r85.8)[[1]]  %>% mutate(cohort=85, day=8)
+### GETTING GLICKO RANKS----
+glickos <- read.csv("glicko_ontheday.csv", stringsAsFactors=FALSE)
+head(glickos)
+table(glickos$grank,glickos$cohort)
+## e.g. who is missing from day 1
+# cohort 83: 12;
+# cohort 37: 11,12;
+# cohort 69: 11,12;
+# cohort 80: 12;
+# cohort 83: 12;
+### This works out what mouseid is missing for which cohort/day and adds them back in and recalculates ranks
+glickos <- glickos %>% mutate(day = ontheday, groupid = paste(cohort,day, sep="."))
+glickos1 <- Filter(function(x) length(x) != 0,
+Filter(function(x) nrow(x) > 0,
+glickos  %>% split(list(.$cohort,.$day))
+) %>%
+map(~ setdiff(1:12,.$mouse))
+)  %>%
+map(~ data.frame(mouse = ., Rating=2200,grank=NA)) %>%
+Map(cbind, ., groupid=names(.)) %>%
+data.table::rbindlist(.) %>%
+rbind(., glickos %>% select(mouse,Rating,grank,groupid)) %>%
+group_by(groupid) %>% arrange(-Rating) %>%
+mutate(grank1=row_number(),
+cohort = gsub("\\..*","", groupid),
+day = sub('.*\\.', '', groupid)) %>%
+ungroup() %>% arrange(cohort,day,grank1)
+table(glickos1$grank1,glickos1$cohort) #check it worked.
+### ADD in rank data to raw data.----
+dfdf <-  rbind(df37.1,df36.9,df37.6,df38.17,
+df39.22, df44.8,df45.14,df46.20,
+df69.1,df80.1,df81.7, df83.12,
+df83.1,df86.1,df86.7,df85.8) #update this with new data
+dfdf$mouse <- as.numeric(gsub("M","", dfdf$subject)) #remove M
+dfdf$subject<-NULL
+dfdf$eating <- ifelse(dfdf$eating==0,0,1) #if ate both sides, add in only 1 so data are 0/1
+dfdf$drinking <- ifelse(dfdf$drinking==0,0,1) #ditto
+glickos1$cohort <- as.numeric(as.character(glickos1$cohort))
+glickos1$day <- as.numeric(as.character(glickos1$day))
+head(dfdf)
+head(glickos1)
+dfdf <- dfdf %>% left_join(glickos1 %>% select(mouse,cohort,day,grank1))
+head(dfdf)
+dfdf[is.na(dfdf$grank1),]
+table(dfdf$grank1)
+#write.table(dfdf, "eatdrink.csv", row.names=F, sep=",")
+setwd("C:/Users/Won/Dropbox/Won/Data_Food intake pattern/cleandata/")
+library(car)
+library(car)
+library(MASS)
+library(ggplot2)
+library(tidyverse)
+dfdf <- read.csv("eatdrink.csv", stringsAsFactors = F)
+head(dfdf)
+df<-dfdf %>% mutate(subjectid=paste(cohort,"-",mouse))
+df<-dfdf %>% mutate(subjectid=paste(cohort,"-",grank1))
+df %>% group_by(subjectid) %>% summarize(eat=sum(eating),drink=sum(drinking))
+dfx<-df %>% group_by(subjectid) %>% summarize(eat=sum(eating),drink=sum(drinking)) %>% as.data.frame()
+head(dfx)
+hist(dfx$eat)
+?hist
+hist(dfx$eat)
+hisst(dfx$drink)
+hist(dfx$drink)
+df<-dfdf %>% mutate(subjectid=paste(cohort,"-",grank1,"-day",day))
+dfx<-df %>% group_by(subjectid) %>% summarize(eat=sum(eating),drink=sum(drinking)) %>% as.data.frame()
+head(dfx)
+dfx<-df %>% group_by(subjectid) %>% summarize(eat=sum(eating),drink=sum(drinking)) %>% as.data.frame()
+head(dfx)
+hist(dfx$eat)
+dfx$eat
+dfx %>% filter(eat>300)
+hist(dfx$drink)
+dfx %>% filter(drink>100)
+dfx %>% filter(drink>80)
+dfx<-df %>% group_by(subjectid,day) %>% summarize(eat=sum(eating),drink=sum(drinking)) %>% as.data.frame()
+head(dfx)
+17*12
+16*12
+hist(dfx$eat)
+hist(dfx$drink)
+dfx %>% filter(eat>300)
+dfx$eat
+dfx
+df<-dfdf %>% filter(day==1) %>% mutate(subjectid=paste(cohort,"-",grank1))
+dfdf <- read.csv("eatdrink.csv", stringsAsFactors = F)
+head(dfdf)
+df<-dfdf %>% mutate(subjectid=paste(cohort,"-",grank1,"-day",day))
+dfx<-df %>% group_by(subjectid,day) %>% summarize(eat=sum(eating),drink=sum(drinking)) %>% as.data.frame()
+head(dfx)
+hist(dfx$eat)
+hist(dfx$drink)
+dfx %>% filter(eat>300) #huh
+dfx %>% filter(drink>80)
+dfx
+dfx %>% filter(day==1)
+df1<-dfx %>% filter(day==1)
+df2<-dfx %>% filter(day>1)
+df1
+hist(df1$eat)
+hist(df1$drink)
+hist(df2$eat)
+hist(df2$drink)
+mean(df2$eat)
+var(df2$eat)
+variance(df2$eat)
+?var
+dfx<-df %>% group_by(subjectid,day,grank1) %>% summarize(eat=sum(eating),drink=sum(drinking)) %>% as.data.frame()
+head(dfx)
+hist(dfx$eat)
+hist(dfx$drink)
+dfx %>% filter(eat>300) #huh
+dfx %>% filter(drink>80)
+df1<-dfx %>% filter(day==1)
+df2<-dfx %>% filter(day>1)
+hist(df1$eat)
+hist(df1$drink)
+hist(df2$eat)
+hist(df2$drink)
+mean(df2$eat)
+variance(df2$eat)
+mean(df2$eat)
+var(df2$eat)
+var(df2$drink)
+mean(df2$drink)
+#devtools::install_github('jalapic/compete')
+library(ggplot2)
+library(splitstackshape)
+library(data.table)
+library(tidyverse)
+library(compete)
+library(PlayerRatings)
+source('paper_script/feedingdrinking_functions.R')
+temp = list.files(pattern=".csv")
+myfiles = lapply(temp, read.csv, stringsAsFactors=F)
+setwd("C:/Users/Won/Dropbox/Won/Data_Food intake pattern")
+source('paper_script/feedingdrinking_functions.R')
+temp = list.files(pattern=".csv")
+temp = list.files(pattern="cleandata/*.csv")
+setwd("C:/Users/Won/Dropbox/Won/Data_Food intake pattern/rawdata/dominance")
+temp = list.files(pattern=".csv") #this needs to be fixed, the behavior data is in /rawdata/dominance/
+myfiles = lapply(temp, read.csv, stringsAsFactors=F)
+names(myfiles) <-paste0("cohort", stringr::str_extract_all(temp,"[0-9]+"))
+lapply(myfiles, head)
+lapply(myfiles, tail)
+myfiles1 <- lapply(myfiles, get_dfy)
+lapply(myfiles1, head)
+myfiles1 %>%
+map(~ filter(., Actor!="Start" & Recipient!="End")) %>%
+map(~ select(., Actor,Recipient)) %>%
+map(get_wl_matrix) -> cohortmatrices
+set.seed(100)
+cohort_devries <- lapply(cohortmatrices, devries)
+set.seed(100)
+cohort_ttritest <- lapply(cohortmatrices, ttri_test)
+summary(unlist(sapply(cohort_devries, "[", 1)))
+unlist(sapply(cohort_devries, "[", 2))
+summary(unlist(sapply(cohort_ttritest, "[", 2)))
+unlist(sapply(cohort_ttritest, "[", 3))
+library(compete)
+temp = list.files(pattern=".csv") #this needs to be fixed, the behavior data is in /rawdata/dominance/
+myfiles = lapply(temp, read.csv, stringsAsFactors=F)
+names(myfiles) <-paste0("cohort", stringr::str_extract_all(temp,"[0-9]+"))
+lapply(myfiles, head)
+lapply(myfiles, tail)
+myfiles1 <- lapply(myfiles, get_dfy)
+lapply(myfiles1, head)
+myfiles1 %>%
+map(~ filter(., Actor!="Start" & Recipient!="End")) %>%
+map(~ select(., Actor,Recipient)) %>%
+map(get_wl_matrix) -> cohortmatrices
+myfiles1 %>%
+map(~ filter(Actor!="Start" & Recipient!="End")) %>%
+map(~ select(Actor,Recipient)) %>%
+map(get_wl_matrix) -> cohortmatrices
+myfiles1 %>%
+map(~ filter(., Actor!="Start" & Recipient!="End")) %>%
+map(~ select(., Actor,Recipient)) %>%
+map(get_wl_matrix) -> cohortmatrices
+library(ggplot2)
+library(splitstackshape)
+library(data.table)
+library(tidyverse)
+library(compete)
+library(PlayerRatings)
+source('paper_script/feedingdrinking_functions.R')
+myfiles1 %>%
+map(~ filter(., Actor!="Start" & Recipient!="End")) %>%
+map(~ select(., Actor,Recipient)) %>%
+map(get_wl_matrix) -> cohortmatrices
+myfiles1 %>%
+map(~ filter(., Actor!="Start" & Recipient!="End")) %>%
+map(~ dplyr::select(., Actor,Recipient)) %>%
+map(get_wl_matrix) -> cohortmatrices
+library(tidyverse)
+cohortmatrices
+ds?
+d
+ds?
+dd
+compete?
+d
+?ds
+lapply(cohortmatrices,function(x) ds(x,norm=TRUE, method="D" ))
+lapply(cohortmatrices,function(x) compete::ds(x,norm=TRUE, method="D" ))
+cohortmatrices[[1]]
+ds(cohortmatrices[[1]])
+ds(cohortmatrices[[1]],norm=T)
+ds(cohortmatrices[[1]],norm=T,method="D")
+devtools::install_github('jalapic/compete')
+library(ggplot2)
+devtools::install_github('jalapic/compete',force=T)
+library(compete)
+lapply(cohortmatrices,function(x) compete::ds(x,norm=TRUE, method="D" ))
+lapply(cohortmatrices,function(x) compete::ds(x,norm=TRUE, method="P" ))
+cohort_ds<-lapply(cohortmatrices,function(x) compete::ds(x,norm=TRUE))
+unlist(sapply(cohort_ds, "[", 3))
+sapply(cohort_ds)
+unlist(sapply(cohort_ds, "[", 2))
+summary(unlist(sapply(cohort_ttritest, "[", 2)))
+summary(unlist(sapply(cohort_ds, "[", 2)))
+summary(unlist(sapply(cohort_ds, "[")))
+summary(unlist(sapply(cohort_ds)))
+cohort_ds<-lapply(cohortmatrices,function(x) compete::ds(as.matrix(x),norm=TRUE,method="D"))
+cohort_ds<-lapply(cohortmatrices,function(x) compete::ds(as.matrix(x),norm=TRUE,type="D"))
+rbindlist(cohort_ds)
+cohort_ds
+myfiles2 <- c(myfiles1,list(myfiles1[[2]], myfiles1[[11]], myfiles1[[13]]) )
+c1 <- c(36,37,38,39,44,45,46,69,80,81,83,85,86,37,83,86) #vector of cohorts
+d1 <- c(9,1,17,22,8,14,20,1,1,6,1,8,1,6,12,7) #vector of days
+names(myfiles2) <-  paste(c ( names(myfiles1), names(myfiles1[2]),  names(myfiles1[11]),names(myfiles1[13])),d1,sep="-")
+myfiles2a <- Map(cbind, myfiles2, cohort = c1)
+myfiles2b <- Map(cbind, myfiles2a, dayofvideo = d1)
+myfiles2b %>%
+map(~ filter(., Actor!="Start" & Recipient!="End")) %>%
+map(~ filter(., day<=dayofvideo)) %>%
+map(~ select(., Actor,Recipient)) %>%
+map(get_wl_matrix) -> cohortmatrices_dv
+names(cohortmatrices_dv)
+myfiles2b %>%
+map(~ filter(., Actor!="Start" & Recipient!="End")) %>%
+map(~ filter(., day<=dayofvideo)) %>%
+map(~ dplyr::select(., Actor,Recipient)) %>%
+map(get_wl_matrix) -> cohortmatrices_dv
+names(cohortmatrices_dv)
+myfiles2b %>%
+map(~ filter(., Actor!="Start" & Recipient!="End")) %>%
+map(~ filter(., day<=dayofvideo)) %>%
+map(~ select(., Actor,Recipient)) %>%
+map(get_wl_matrix) -> cohortmatrices_dv
+names(cohortmatrices_dv)
+which(d1>1) -> notday1
+cohortmatrices_dv_postday1 <- cohortmatrices_dv[notday1]
+set.seed(100)
+cohortmatrices_dv_postday1
+cohort_ds_postday1<-lapply(cohortmatrices_dv_postday1,function(x) compete::ds(as.matrix(x),norm=TRUE,type="D"))
+cohort_ds_postday1
+cohort_devries_postday1 <- lapply(cohortmatrices_dv_postday1, devries)
+cohort_devries_postday1
+summary(unlist(sapply(cohort_devries_postday1, "[", 1)))
+unlist(sapply(cohort_devries_postday1, "[", 2))
+summary(unlist(sapply(cohort_devries_postday1, "[", 1)))
+summary(unlist(sapply(cohort_ds_postday1, "[", 1)))
+unlist(sapply(cohort_devries_postday1, "[", 1))
+unlist(sapply(cohort_ds_postday1, "[", 1))
+unlist(sapply(cohort_ds_postday1, "[", 1:12))
+sapply(cohort_ds_postday1, "[", 1:12)
+summary(unlist(sapply(cohort_ds_postday1, "[", 1:12)))
+unlist(sapply(cohort_ds_postday1, "[", 1:12))
+a<-unlist(sapply(cohort_ds_postday1, "[", 1:12))
+mouse<-c(1,10,11,12,3,4,5,6,7,8,9) #this is how they are listed in 'ds_unlist'
+as.data.frame(ds_unlist)
+ds_unlist<-unlist(sapply(cohort_ds_postday1, "[", 1:12))
+as.data.frame(ds_unlist)
+ds_unlist<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,3,4,5,6,7,8,9)) #this is how they are listed in 'ds_unlist'
+ds_unlist<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,2,3,4,5,6,7,8,9)) #this is how they are listed in 'ds_unlist'
+ds_unlist
+unlist(sapply(cohort_ds_postday1, "[", 1:12))
+ds_unlist<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,2,3,4,5,6,7,8,9)) #this is how they are listed in unlist(sapply(cohort_ds_postday1))
+ds_unlist %>% gather(cohort,ds,1:11)
+ds_unlist<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,2,3,4,5,6,7,8,9)) %>%  #this is how they are listed in unlist(sapply(cohort_ds_postday1))
+gather(cohort,ds,1:11)
+ds_unlist<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,2,3,4,5,6,7,8,9)) %>%  #this is how they are listed in unlist(sapply(cohort_ds_postday1))
+gather(cohort,ds,1:11) %>%
+ds_unlist %>% mutate(cohort=substr(cohort,7,8),day=substr(cohort,10))
+ds_unlist %>% mutate(cohort=substr(cohort,7,8),day=substr(cohort,10))
+ds_unlist<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,2,3,4,5,6,7,8,9)) %>%  #this is how they are listed in unlist(sapply(cohort_ds_postday1))
+gather(cohort,ds,1:11) %>%
+ds_unlist %>% mutate(cohort=substr(cohort,7,8),day=substr(cohort,10,12))
+ds_unlist %>% mutate(cohort=substr(cohort,7,8),day=substr(cohort,10,12))
+ds_unlist<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,2,3,4,5,6,7,8,9)) %>%  #this is how they are listed in unlist(sapply(cohort_ds_postday1))
+gather(cohort,ds,1:11) %>%
+ds_unlist %>% mutate(day=substr(cohort,10,12),cohort=substr(cohort,7,8))
+ds_unlist %>% mutate(day=substr(cohort,10,12),cohort=substr(cohort,7,8))
+ds_unlist<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,2,3,4,5,6,7,8,9)) %>%  #this is how they are listed in unlist(sapply(cohort_ds_postday1))
+gather(cohort,ds,1:11) %>%
+mutate(day=substr(cohort,10,12),cohort=substr(cohort,7,8))
+str(ds_unlist)
+write.csv(ds_unlist,"davidscore_ontheday.csv")
+ds_postday1<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,2,3,4,5,6,7,8,9)) %>%  #this is how they are listed in unlist(sapply(cohort_ds_postday1))
+gather(cohort,ds,1:11) %>%
+mutate(day=substr(cohort,10,12),cohort=substr(cohort,7,8))
+ds_postday1
+str(ds_postday1)
+df2$drink
+str(df2)
+dfx<-df %>% group_by(subjectid,day,grank1,mouse,cohort) %>% summarize(eat=sum(eating),drink=sum(drinking)) %>% as.data.frame()
+df<-dfdf %>% mutate(subjectid=paste(cohort,"-",grank1,"-day",day))
+dfx<-df %>% group_by(subjectid,day,grank1,mouse,cohort) %>% summarize(eat=sum(eating),drink=sum(drinking)) %>% as.data.frame()
+head(dfx)
+df1<-dfx %>% filter(day==1)
+df2<-dfx %>% filter(day>1)
+str(df2)
+str(ds_postday1)
+ds_postday1$mouse<-as.character(ds_postday1$mouse)
+left_join(df2,ds_postday1)
+df2$day<-as.character(df2$day)
+left_join(df2,ds_postday1)
+df2$mouse<-as.character(df2$mouse)
+str(ds_postday1)
+str(df2)
+df2$cohort<-as.character(df2$cohort)
+left_join(df2,ds_postday1)
+ds_postday1<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,2,3,4,5,6,7,8,9)) %>%  #this is how they are listed in unlist(sapply(cohort_ds_postday1))
+gather(cohort,ds,1:11) %>%
+mutate(day=substr(cohort,10,12),cohort=substr(cohort,7,8))
+ds_postday1
+c1 <- c(36,37,38,39,44,45,46,69,80,81,83,85,86,37,83,86) #vector of cohorts
+d1 <- c(9,1,17,22,8,14,20,1,1,7,1,8,1,6,12,7) #vector of days
+names(myfiles2) <-  paste(c ( names(myfiles1), names(myfiles1[2]),  names(myfiles1[11]),names(myfiles1[13])),d1,sep="-")
+myfiles2a <- Map(cbind, myfiles2, cohort = c1)
+myfiles2b <- Map(cbind, myfiles2a, dayofvideo = d1)
+myfiles2b %>%
+map(~ filter(., Actor!="Start" & Recipient!="End")) %>%
+map(~ filter(., day<=dayofvideo)) %>%
+map(~ select(., Actor,Recipient)) %>%
+map(get_wl_matrix) -> cohortmatrices_dv
+names(cohortmatrices_dv)
+which(d1>1) -> notday1
+cohortmatrices_dv_postday1 <- cohortmatrices_dv[notday1]
+cohort_ds_postday1<-lapply(cohortmatrices_dv_postday1,function(x) compete::ds(as.matrix(x)a,norm=TRUE,type="D"))
+cohort_ds_postday1<-lapply(cohortmatrices_dv_postday1,function(x) compete::ds(x,norm=TRUE,type="D"))
+summary(unlist(sapply(cohort_ds_postday1, "[", 1:12)))
+ds_postday1<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,2,3,4,5,6,7,8,9)) %>%  #this is how they are listed in unlist(sapply(cohort_ds_postday1))
+gather(cohort,ds,1:11) %>%
+mutate(day=substr(cohort,10,12),cohort=substr(cohort,7,8))
+write.csv(ds_postday1,"davidscore_ontheday.csv")
+ds_postday1<-read.csv("davidscore_ontheday.csv")
+str(ds_postday1)
+str(df2)
+ds_postday1$mouse<-as.character(ds_postday1$mouse)
+df2$day<-as.character(df2$day)
+df2$mouse<-as.character(df2$mouse)
+df2$cohort<-as.character(df2$cohort)
+left_join(df2,ds_postday1)
+ds_postday1<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,2,3,4,5,6,7,8,9)) %>%  #this is how they are listed in unlist(sapply(cohort_ds_postday1))
+gather(cohort,ds,1:11) %>%
+mutate(day=substr(cohort,10,12),cohort=substr(cohort,7,8))
+myfiles2 <- c(myfiles1,list(myfiles1[[2]], myfiles1[[11]], myfiles1[[13]]) )
+c1 <- c(36,37,38,39,44,45,46,69,80,81,83,85,86,37,83,86) #vector of cohorts
+d1 <- c(9,1,17,22,8,14,20,1,1,7,1,8,1,6,12,7) #vector of days
+names(myfiles2) <-  paste(c ( names(myfiles1), names(myfiles1[2]),  names(myfiles1[11]),names(myfiles1[13])),d1,sep="-")
+myfiles2a <- Map(cbind, myfiles2, cohort = c1)
+myfiles2b <- Map(cbind, myfiles2a, dayofvideo = d1)
+myfiles2b %>%
+map(~ filter(., Actor!="Start" & Recipient!="End")) %>%
+map(~ filter(., day<=dayofvideo)) %>%
+map(~ select(., Actor,Recipient)) %>%
+map(get_wl_matrix) -> cohortmatrices_dv
+names(cohortmatrices_dv)
+myfiles2b %>%
+map(~ filter(., Actor!="Start" & Recipient!="End")) %>%
+map(~ filter(., day<=dayofvideo)) %>%
+map(~ dplyr::select(., Actor,Recipient)) %>%
+map(get_wl_matrix) -> cohortmatrices_dv
+names(cohortmatrices_dv)
+which(d1>1) -> notday1
+cohortmatrices_dv_postday1 <- cohortmatrices_dv[notday1]
+set.seed(100)
+cohort_devries_postday1 <- lapply(cohortmatrices_dv_postday1, devries)
+cohort_ds_postday1<-lapply(cohortmatrices_dv_postday1,function(x) compete::ds(x,norm=TRUE,type="D"))
+summary(unlist(sapply(cohort_ds_postday1, "[", 1:12)))
+ds_postday1<-unlist(sapply(cohort_ds_postday1, "[", 1:12)) %>%
+as.data.frame() %>%
+mutate(mouse=c(1,10,11,12,2,3,4,5,6,7,8,9)) %>%  #this is how they are listed in unlist(sapply(cohort_ds_postday1))
+gather(cohort,ds,1:11) %>%
+mutate(day=substr(cohort,10,12),cohort=substr(cohort,7,8))
+write.csv(ds_postday1,"davidscore_ontheday.csv")
+left_join(df2,ds_postday1)
+str(ds_postday1)
+str(df2)
+ds_postday1$mouse<-as.character(ds_postday1$mouse)
+df2$day<-as.character(df2$day)
+df2$mouse<-as.character(df2$mouse)
+df2$cohort<-as.character(df2$cohort)
+left_join(df2,ds_postday1)
+mod<-left_join(df2,ds_postday1) %>% as.data.frame()
+fit1<-glmer(eat~ds+day+(1|cohort),family=poisson(link="log"),mod)
+library(car)
+fit1<-glmer(eat~ds+day+(1|cohort),family=poisson(link="log"),mod)
+library(MASS)
+fit1<-glmer(eat~ds+day+(1|cohort),family=poisson(link="log"),mod)
+??glmer
+library(lme4)
+library(lmerTest)
+fit1<-glmer(eat~ds+day+(1|cohort),family=poisson(link="log"),mod)
+summary(fit1)
+fit1<-glmer(eat~ds+(1|cohort),family=poisson(link="log"),mod)
+summary(fit1)
+fit1<-glmer(eat~ds+day+(1|cohort),family=poisson(link="log"),mod)
+summary(fit1)
+str(mod)
+df2<-dfx %>% filter(day>1)
+ds_postday1<-read.csv("davidscore_ontheday.csv")
+str(ds_postday1)
+str(df2)
+ds_postday1$mouse<-as.character(ds_postday1$mouse)
+df2$mouse<-as.character(df2$mouse)
+df2$cohort<-as.character(df2$cohort)
+mod<-left_join(df2,ds_postday1) %>% as.data.frame()
+ds_postday1$cohort<-as.character(ds_postday1$cohort)
+mod<-left_join(df2,ds_postday1) %>% as.data.frame()
+str(mod)
+head(mod)
+ds_postday1<-read.csv("davidscore_ontheday.csv",rownames=F)
+ds_postday1<-read.csv("davidscore_ontheday.csv",rowname=F)
+?read.csv
+ds_postday1<-read.csv("davidscore_ontheday.csv",row.names=F)
+ds_postday1<-read.csv("davidscore_ontheday.csv",row.names=NA)
+ds_postday1<-read.csv("davidscore_ontheday.csv",row.names=NULL)
+ds_postday1$mouse<-as.character(ds_postday1$mouse)
+ds_postday1$cohort<-as.character(ds_postday1$cohort)
+df2$mouse<-as.character(df2$mouse)
+df2$cohort<-as.character(df2$cohort)
+mod<-left_join(df2,ds_postday1) %>% as.data.frame()
+str(mod)
+str(df2)
+ds_postday1<-read.csv("davidscore_ontheday.csv",row.names=NULL)
+str(ds_postday1)
+ds_postday1<-read.csv("davidscore_ontheday.csv",row.names=NULL)
+ds_postday1<-read.csv("davidscore_ontheday.csv")
+str(ds_postday1)
+str(df2)
+ds_postday1$mouse<-as.character(ds_postday1$mouse)
+ds_postday1$cohort<-as.character(ds_postday1$cohort)
+df2$mouse<-as.character(df2$mouse)
+df2$cohort<-as.character(df2$cohort)
+mod<-left_join(df2,ds_postday1) %>% as.data.frame()
+str(mod)
+head(mod)
+library(lme4)
+library(lmerTest)
+fit1<-glmer(eat~ds+day+(1|cohort),family=poisson(link="log"),mod)
+fit1<-glmer(eat~ds(1|cohort),family=poisson(link="log"),mod)
+fit1<-glmer(eat~ds+(1|cohort),family=poisson(link="log"),mod)
+summary(fit1)
+resid(fit1)
+qqnorm(resid(fit1))
+hist(resid(fit1))
+fit1x<-lme(eat~ds+(1|cohort),mod)
+fit1x<-lmer(eat~ds+(1|cohort),mod)
+summary(fit1x)
+anova(fit1,fit1x)
+hist(resid(fit1x))
+summary(fit1x)
+fit2<-glmer(drink~ds+(1|cohort),family=poisson(link="log"),mod)
+summary(fit2)
+qqnorm(resid(fit2))
+hist(resid(fit2))
+fit2x<-lmer(drink~ds+(1|cohort),mod)
+summary(fit2x) #it's all fucking significant anyway
+hist(resid(fit2x))
+anova(fit2,fit2x) #fit1x AIC=1361.1 way lower
+res=residuals(fit1,type="response")
+shapiro.test(res)
+res=residuals(fit1x,type="response")
+res=residuals(fit1x,type="response")
+shapiro.test(res)
+fit2_null<-lmer(drink~(1|cohort),mod)
+anova(fit2,fit2x,fit2_null) #fit1x AIC=1361.1 way lower
+anova(fit2x,fit2_null) #fit1x AIC=1361.1 way lower
+fit1_null<-lmer(eat~(1|cohort),mod)
+anova(fit1_null,fit1x) #fit1x AIC=1361.1 way lower
+summary(fit1x) #it's all fucking significant anyway

@@ -1,0 +1,17 @@
+
+
+1. gettimes.R 
+--> set seed
+--> arrange by side & time 
+
+2. Go to Clean data for that cohort 
+
+3. Also open raw data for that cohort
+--> Compare the data pattern to find the exact time point on the video
+--> Mark as yellow cell color
+
+4. Open the video in Observer.
+--> code duration for that minute. 
+
+
+Let's do it!!!
